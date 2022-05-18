@@ -1,5 +1,5 @@
 # exercicio-js-noite
-exercícios de java script turma noite
+exercícios de javascript turma noite
 
  
    * --------Exercício 02---------------
