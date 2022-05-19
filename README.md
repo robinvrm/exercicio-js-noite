@@ -11,9 +11,9 @@ exercícios de javascript turma noite
    COR   | VALOR EXEMPLO
 --------- | ------
 VERDE | R$ 10
-AMARELO | R$ 8
-VERMELHO | R$ 7
-AZUL | R$ 8
+AMARELO | R$ 12
+VERMELHO | R$ 15
+AZUL | R$ 25
  
  
 
