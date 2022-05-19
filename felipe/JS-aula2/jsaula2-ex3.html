@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    // Calcular IMC
+    // IMC = peso / (altura * altura)
+    // menor que 18,5 - abaixo do peso normal
+    // 18,5 - 24,9 - peso normal
+    // 25 - 29,9 - excesso de peso
+    // 30 - 34,9 - obesidade classe I
+    // 35 - 39,9 - obesidade classe II
+    // maior ou igual a 40 - obesidade classe III
+
+
+    let peso = 70;
+    let altura = 2.50;
+
+    let IMC = peso / (altura * altura);
+
+    if (IMC >= 40) {
+        console.log('Obesidade Classe III');
+    }
+    else if (IMC >= 35 && IMC < 40) {
+        console.log('Obesidade Classe II');
+    }
+    else if (IMC >= 30 && IMC < 35) {
+        console.log('Obesidade Classe I');
+    }
+    else if (IMC >= 25 && IMC < 30) {
+        console.log('Excesso de peso');
+    }
+    else if (IMC >= 18.5 && IMC < 25) {
+        console.log('Peso normal');
+    }
+    else if (IMC < 18.5) {
+        console.log('Abaixo do normal');
+    }
+
+
+
+
+
+
+
+    // switch (res) {
+    //     case (IMC < 18.5):
+    //         console.log('Abaixo do normal');
+    //         break;
+    //     case (IMC >= 18.5):
+    //         console.log('Peso normal');
+    //         break;
+    //     case (IMC >= 25):
+    //         console.log('Excesso de peso');
+    //         break;
+    //     case (IMC >= 30):
+    //         console.log('Obesidade Classe I');
+    //         break;
+    //     case (IMC >= 40):
+    //         console.log('Obesidade Classe III');
+    //         break;
+    //     default:
+    //         console.log(0);
+    // }
+</script>
+
+<body>
+
+</body>
+
+</html>
