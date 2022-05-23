@@ -37,12 +37,60 @@ AZUL | R$ 25
    > * Verificar se um número inteiro é divisível por 3. Mostrar no console a mensagem se é divisível ou não.
 
 Switch case
+
+Exemplo:
+* Mostrar a estação do ano, conforme mês escolhido.
+~~~
+ let mes = "Janeiro";
+
+ switch (mes) {
+     case "Janeiro":
+     case "Fevereiro":
+     case "Março":
+         console.log("Verão!");
+         break;
+     case "Abril":
+     case "Maio":
+     case "Junho":
+         console.log("Outono!");
+         break;
+     case "Julho":
+     case "Agosto":
+     case "Setembro":
+         console.log("Inverno!");
+         break;
+     case "Outubro":
+     case "Novembro":
+     case "Dezembro":
+         console.log("Primavera!");
+ }
+~~~
+
+
 > ### - Exercício 01
 >    *  exercício verificar o salário conforme o cargo
 >    salário base = 2000;
 >    se for gerente, ganha 10% a mais do salário base
 >    se for supervisor, ganha 50% a mais do salário base
 >    qualquer outro cargo, ganha o salário base
+ * Exercício resolvido em sala de aula:
+
+~~~
+let cargo = "supervisor";
+let salarioBase = 2000;
+ switch (cargo) {
+     case "gerente":
+         salarioBase *= 1.10;
+         break;
+     case "supervisor":
+         salarioBase *= 1.50;
+         break;
+     default:
+         salarioBase = salarioBase;
+         break;
+ }
+ console.log(salarioBase);
+~~~
 
 > ### - Exercício 02 -  calculadora
 >  * faça um script que receba 2 números, e possa escolher umas das 4 operações básicas. Retorne o resultado da operação escolhida.
