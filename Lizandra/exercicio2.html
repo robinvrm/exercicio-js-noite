@@ -1,41 +1,102 @@
 <script>
-// let cargo = "gerente";
-// let salario = 2000;
-// let val;
+    // let cargo = "gerente";
+    // let salario = 2000;
+    // let val;
 
-// switch (cargo) {
-//     case "gerente": 
-//     val = salario*1.1
-//         console.log("o resultado é: " + val);
-//         break;
-    
-//     case "supervisor":
-//     val = salario*1.5
-//         console.log("o resultado é" + val);
-//         break;
-   
-//     case "outrocargo":
-//     console.log("o resultado é" + salario);
-//     break;
-// }
+    // switch (cargo) {
+    //     case "gerente": 
+    //     val = salario*1.1
+    //         console.log("o resultado é: " + val);
+    //         break;
 
-// let valorum = 10;
-// let valordois = 20;
-// let resultado;
-// let opcao = "soma";
+    //     case "supervisor":
+    //     val = salario*1.5
+    //         console.log("o resultado é" + val);
+    //         break;
 
-//    switch (opcao) {
-//        case "soma":
-//            resultado = valorum+valordois
-//            console.log("valor um "  + valorum +  "valor dois " + valordois + "resultado " + resultado);
-//            break;
-//    }
+    //     case "outrocargo":
+    //     console.log("o resultado é" + salario);
+    //     break;
+    // }
 
-let peso = 64;
-let altura = 162;
-let result;
+    // let valorum = 10;
+    // let valordois = 20;
+    // let resultado;
+    // let opcao = "soma";
 
+    //    switch (opcao) {
+    //        case "soma":
+    //            resultado = valorum+valordois
+    //            console.log("valor um "  + valorum +  "valor dois " + valordois + "resultado " + resultado);
+    //            break;
+    //    }
 
+    // let peso = 80;
+    // let altura = 1.62;
+    // let imc = peso / (altura * altura);
+    // console.log(imc);
+    // if (imc < 18.5) {
+    //     console.log("abaixo do peso normal")
+
+    // } else if (imc > 18.5 && imc < 25) {
+    //     console.log("peso normal")
+    // }
+    // else if (imc >= 25 && imc < 30) {
+    //     console.log("sobrepeso")
+    // }
+    // else if (imc >= 30 && imc < 35) {
+    //     console.log("Obesidade")
+    // }
+    // else if (imc >= 35 && imc < 40) {
+    //     console.log("Obesidade 2")
+    // }
+    // else if (imc >= 40) {
+    //     console.log("Obesidade 3")
+    // }
+    let valor_total = 1000;
+    let opcaoCompra = 'parcelado cartao';
+    let limite = 1200
+    let parcelas = 10
+
+    switch (opcaoCompra) {
+        case "pix":
+            valor_total = valor_total - valor_total * 0.1;
+            console.log(valor_total);
+            break;
+        case "debito":
+            valor_total = valor_total;
+            console.log(valor_total);
+            break;
+        case "credito":
+            valor_total = valor_total + valor_total *0.05;
+            if ( limite > valor_total ) {
+                console.log( "limite aprovado")
+                console.log("a forma de pgmento é " + opcaoCompra)
+            }
+            console.log(valor_total);
+            break;
+
+        case "parcelado cartao":
+            valor_total = valor_total + valor_total *0.10;
+            if ( limite > valor_total ) {
+                console.log( "limite aprovado")
+                console.log("a forma de pgmento é " + opcaoCompra)
+                console.log("parcelado em 10x")
+                console.log("o valor de cada parcela é " + valor_total / parcelas)
+            }
+            console.log(valor_total);
+            break;
+        case "parcelado carne":
+            valor_total = valor_total + valor_total *0.20;
+            console.log(valor_total);
+            break;   
+
+           
+
+        
+
+        default:
+            break;
+    }
 
 </script>
-
