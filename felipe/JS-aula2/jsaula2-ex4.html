@@ -12,8 +12,55 @@
 
 <script>
 
-   
-   
+    // compras. crie um script com a seguinte situação. uma variável com valor total da compra. tipos de pagamentos: pix, débito, crédito, parcelado no cartão, parcelado no carnê. se for pix, aplica-se um desconto de 10%; se for no débito, valor original; se for crédito em 1x, acréscimo de 5%; se for parcelado no cartão, acréscimo de 10% por parcela; se for parcelado no carnê, acréscimo de 20% por parcela; se a compra for feita em cartão, tanto em crédito ou em débito, verificar se tem o valor disponível no cartão; o valor do cartão será dada por uma variável aparecer a forma de pagamento, em quantas vezes foi escolhido, se for parcelado aparecer o valor total e valor de cada parcela
+
+    let valortotal = 1000;
+
+    let pag = 'Carne';
+    let parc = 4;
+
+    let saldocartao = 2000;
+
+    let pix = valortotal * 0.90;
+    let credito = valortotal * 1.05;
+    let parccartao = valortotal + valortotal * 0.10 * parc;
+    let parccarne = valortotal + valortotal * 0.20 * parc;
+
+    let divcartao = parccartao / parc;
+    let divcarne = parccarne / parc;
+
+    switch (pag) {
+        case 'Pix':
+            console.log('Forma de pagamento: ' + 'PIX à vista ' + '- R$ ' + pix);
+            break;
+        case 'Debito':
+            if (saldocartao < valortotal) {
+                console.log('Saldo indisponível');
+            }
+            if (saldocartao >= valortotal) {
+                console.log('Forma de pagamento: ' + 'Débito à vista' + ' - R$ ' + valortotal + ' (Saldo disponível)');
+            }
+            break;
+        case 'Credito':
+            if (parc > 1 && saldocartao >= parccartao) {
+                console.log('Forma de pagamento: ' + 'Crédito ' + '(' + parc + 'x ' + divcartao + ')' + ' - R$ ' + parccartao + ' (Saldo disponível)');
+            }
+            if (parc = 1 && saldocartao < credito) {
+                console.log('Saldo indisponível');
+            }
+            if (parc > 1 && saldocartao < parccartao) {
+                console.log('Saldo indisponível');
+            }
+            break;
+        case 'Carne':
+            console.log('Forma de pagamento: ' + 'Carnê ' + '(' + parc + 'x ' + divcarne + ')' + ' - R$ ' + parccarne);
+            break;
+
+        default:
+            console.log('erro');
+    }
+
+
 </script>
 
 <body>
