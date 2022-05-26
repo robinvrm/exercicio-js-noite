@@ -1,8 +1,9 @@
 <script>
+    // EXERCÍCIO 1
     // let cargo = "gerente";
     // let salario = 2000;
     // let val;
-
+// case é uma escolha
     // switch (cargo) {
     //     case "gerente": 
     //     val = salario*1.1
@@ -19,6 +20,7 @@
     //     break;
     // }
 
+// EXERCÍCIO 2
     // let valorum = 10;
     // let valordois = 20;
     // let resultado;
@@ -31,6 +33,7 @@
     //            break;
     //    }
 
+// EXERCÍCIO 3
     // let peso = 80;
     // let altura = 1.62;
     // let imc = peso / (altura * altura);
@@ -53,45 +56,55 @@
     // else if (imc >= 40) {
     //     console.log("Obesidade 3")
     // }
-    let valor_total = 1000;
-    let opcaoCompra = 'parcelado cartao';
-    let limite = 1200
-    let parcelas = 10
 
-    switch (opcaoCompra) {
-        case "pix":
-            valor_total = valor_total - valor_total * 0.1;
-            console.log(valor_total);
-            break;
-        case "debito":
-            valor_total = valor_total;
-            console.log(valor_total);
-            break;
-        case "credito":
-            valor_total = valor_total + valor_total *0.05;
-            if ( limite > valor_total ) {
-                console.log( "limite aprovado")
-                console.log("a forma de pgmento é " + opcaoCompra)
-            }
-            console.log(valor_total);
-            break;
+    // EXERCÍCIO 4
+    // let valor_total = 1000;
+    // let opcaoCompra = 'parcelado cartao';
+    // let limite = 1200
+    // let parcelas = 10
 
-        case "parcelado cartao":
-            valor_total = valor_total + valor_total *0.10;
-            if ( limite > valor_total ) {
-                console.log( "limite aprovado")
-                console.log("a forma de pgmento é " + opcaoCompra)
-                console.log("parcelado em 10x")
-                console.log("o valor de cada parcela é " + valor_total / parcelas)
-            }
-            console.log(valor_total);
-            break;
-        case "parcelado carne":
-            valor_total = valor_total + valor_total *0.20;
-            console.log(valor_total);
-            break;   
+    // switch (opcaoCompra) {
+    //     case "pix":
+    //         valor_total = valor_total - valor_total * 0.1;
+    //         console.log(valor_total);
+    //         break;
+    //     case "debito":
+    //         valor_total = valor_total;
+    //         console.log(valor_total);
+    //         break;
+    //     case "credito":
+    //         valor_total = valor_total + valor_total *0.05;
+    //         if ( limite > valor_total ) {
+    //             console.log( "limite aprovado")
+    //             console.log("a forma de pgmento é " + opcaoCompra)
+    //         }
+    //         console.log(valor_total);
+    //         break;
+
+    //     case "parcelado cartao":
+    //         valor_total = valor_total + valor_total *0.10;
+    //         if ( limite > valor_total ) {
+    //             console.log( "limite aprovado")
+    //             console.log("a forma de pgmento é " + opcaoCompra)
+    //             console.log("parcelado em 10x")
+    //             console.log("o valor de cada parcela é " + valor_total / parcelas)
+    //         }
+    //         console.log(valor_total);
+    //         break;
+
+    //     case "parcelado carne":
+    //         valor_total = valor_total + valor_total *0.20;
+            //    if ( limite > valor_total ) {
+    //             console.log("a forma de pgmento é " + opcaoCompra)
+    //             console.log("parcelado em 10x")
+    //             console.log("o valor de cada parcela é " + valor_total / parcelas)
+    //         console.log(valor_total);
+    //         break;   
+
+           EXERCICIO 5
 
            
+
 
         
 
