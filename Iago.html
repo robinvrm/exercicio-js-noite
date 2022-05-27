@@ -211,25 +211,21 @@
 
     fazer o cálculo do IMC 02 - Calcular IMC */
 
-    // let peso = 70;
-    // let altura = 1.70;
 
-    // let imc = "imc"
+    // let peso = 60;
+    // let altura = 1.50;
 
-    // switch (imc) {
-    //     case "imc":
-    //         imc = peso / (altura * altura);
-    //         console.log(imc)
-    //         break;
-    // // }
-
-    // let imc = "40"
+    // let imc = peso / (altura * altura);
+    // console.log(imc)
 
     // if (imc < 18.5) {
     //     console.log("abaixo do peso normal")
     // }
     // if (imc >= 18.5 && imc <= 24.9) {
     //     console.log("peso normal")
+    // }
+    // if (imc >= 25 && imc <= 29.9) {
+    //     console.log("excesso de peso")
     // }
     // if (imc >= 30 && imc <= 34.9) {
     //     console.log("obesidade classe 1")
@@ -242,40 +238,70 @@
     // }
 
     /* Exercício 04
-    compras 
+    compras
 
     crie um script com a seguinte situação. uma variável com valor total da compra.
      tipos de pagamentos: pix, débito, crédito, parcelado no cartão, parcelado no carnê.
       se for pix, aplica-se um desconto de 10%; se for no débito, valor original; se for
-       crédito em 1x, acréscimo de 5%; se for parcelado no cartão, acréscimo de 10% por 
-       parcela; se for parcelado no carnê, acréscimo de 20% por parcela; se a compra for 
+       crédito em 1x, acréscimo de 5%; se for parcelado no cartão, acréscimo de 10% por
+       parcela; se for parcelado no carnê, acréscimo de 20% por parcela; se a compra for
        feita em cartão, tanto em crédito ou em débito, verificar se tem o valor disponível
         no cartão; o valor do cartão será dada por uma variável aparecer a forma de pagamento,
-    quantas vezes foi escolhido, se for parcelado aparecer o valor total e valor de cada par. */
+    quantas vezes foi escolhido, se for parcelado aparecer o valor total e valor de cada parcela. */
 
-    // let valortotal = 2300;
-    // let menos10per = 230;
-    // let credito1x = 115;
-    // let cretidomaisx = 230;
 
-    // let formapgto = "parceladocartao"
-    // let resultado = 0;
 
-    // switch (formapgto) {
-    //     case "pix":
-    //         resultado = (valortotal - menos10per);
-    //         console.log(resultado)
-    //         break;
-    //     case "debito":
-    //         resultado = valortotal;
-    //         console.log(resultado)
-    //         break;
-    //     case "credito1x":
-    //         resultado = (valortotal + credito1x);
-    //         console.log(resultado)
-    //         break;
+    let valortotal = 2500;
+    let resultado = 0;
+    let formapgto = "credito"
+    let limitecar = 2500;
+    let qtdparc = 5;
 
-    // }
+
+    switch (formapgto) {
+        case "pix":
+            resultado = valortotal * 0.90;
+            console.log("Valor da compra R$" + resultado);
+            break;
+
+        case "debito":
+            if (limitecar >= valortotal) {
+
+                console.log("Pode Comprar Limite R$" + limitecar)
+            }
+            else {
+                console.log("Não pode Comprar limite R$" + limitecar)
+            }
+
+        case "debito":
+            resultado = valortotal;
+            console.log("Valor da compra R$" + resultado);
+
+            break;
+
+        case "credito":
+            if (limitecar >= (valortotal + (valortotal * 0.05))) {
+
+                console.log("Pode Comprar Limite R$" + limitecar)
+            }
+            else {
+                console.log("Não pode Comprar limite R$" + limitecar)
+            }
+            resultado = valortotal + (valortotal * 0.05);
+            console.log("Valor da compra R$" + resultado);
+            if (valortotal / qtdparc)
+                console.log("Valor da parela R$" + ((valortotal * 0.05 + valortotal) / qtdparc))
+            break;
+
+        case "carne":
+        case "pix":
+            resultado = valortotal + (valortotal * 0.20);
+            console.log("Valor da compra R$" + resultado);
+            if (valortotal / qtdparc)
+                console.log("Valor da parela R$" + ((valortotal * 0.20 + valortotal) / qtdparc))
+            break;
+
+    }
 
     /* Exercício 05 - Desafio
 
@@ -283,9 +309,9 @@ Lista de filmes:
 
 Escreva um script que, de acordo com a opção escolhida, mostrará as opções para o usuário.
 Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme.
-Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no 
-console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro 
-do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que 
+Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no
+console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro
+do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que
 a idade > do usuário pode assistir. */
 
     // let idade = "14"
@@ -310,6 +336,8 @@ a idade > do usuário pode assistir. */
     // else if (idade < romance) {
     //     console.log("Este título não é para sua idade. É recomendado assistir comédia ou animação.")
     // }
+
+
 
 
 
