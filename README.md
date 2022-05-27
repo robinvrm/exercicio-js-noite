@@ -148,3 +148,31 @@ Terror | 18
  > Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme.
  > Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no console "Bom Filme";
  > Caso a idade do usuário não ter o mínimo da classificação do genêro do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que a idade > do usuário pode assistir.
+
+# LOOP
+
+01 - Escrever um algoritmo para mostrar os números ímpares entre 100 e 200.
+
+02 - Desenvolver um algoritmo que efetue a soma de todos os números ímpares que são múltiplos de
+três e que se encontram no conjunto dos números de 1 até 500.
+
+03 - Escrever um algoritmo que leia um valor para uma variável N de 1 a 10 e calcule a tabuada de
+N. Mostre a tabuada na forma: 0 x N = 0, 1 x N = 1N, 2 x N = 2N, ..., 10 x N = 10N
+
+04 - Escrever um script que leia número de 0 a 999. Desses, fazer a soma apenas dos ímpares e mostrar na tela. Mostrar também o total de números ímpares e pares. E por fim,  fazer a média aritmética da soma dos números divisíveis por 3;
+
+05 - Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas. Este programa deverá calcular e
+mostrar : [array]
+a. A menor altura do grupo;
+b. A maior altura do grupo;
+
+06 - Escrever um algoritmo que leia 10 números e conte quantos deles
+estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. 
+mostre na tela a quantidade de vezes que aparece cada intervalo.
+[array]
+
+07 - Faça um algoritmo que leia 6 valores positivos.
+Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos
+números lidos.[array]
+
+08 - escreva um script que leia 15 números positivos, econtre o maior deles e o menos deles, e mostre na tela. [array]
