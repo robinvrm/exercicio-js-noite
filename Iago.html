@@ -174,20 +174,173 @@
          "classe alta" base salário mínimo 1212. Salário da pessoa irá ser dada pela 
          variável */
 
-        //  let salariominimo = "6061"
-         
-        //  if (salariominimo <= 1212) {
-        //      console.log("Baixa renda")
+    //  let salariominimo = "6061"
 
-        //  }
-        //  if (salariominimo > 1212 && salariominimo <= 6060) {
-        //      console.log ("Classe média")
+    //  if (salariominimo <= 1212) {
+    //      console.log("Baixa renda")
 
-        //  }
-        //  if (salariominimo >= 6061) {
-        //      console.log ("Classe alta")
+    //  }
+    //  if (salariominimo > 1212 && salariominimo <= 6060) {
+    //      console.log ("Classe média")
 
-        //  }
+    //  }
+    //  if (salariominimo >= 6061) {
+    //      console.log ("Classe alta")
+
+    //  }
+    /* Exercício 03 - Verificar se um número inteiro é divisível por 3.
+     Mostrar no console a mensagem se é divisível ou não.*/
+
+    // let numero = "3"
+
+    // switch (numero) {
+    //     case "3":
+    //     case "6":
+    //     case "9":
+    //         console.log("Divisível")
+    //         break;
+    //     case "1":
+    //     case "2":
+    //     case "4":
+    //     case "5":
+    //         console.log("Não divisível")
+
+    // }
+
+    /* Exerecício 03 - IMC
+
+    fazer o cálculo do IMC 02 - Calcular IMC */
+
+
+    // let peso = 60;
+    // let altura = 1.50;
+
+    // let imc = peso / (altura * altura);
+    // console.log(imc)
+
+    // if (imc < 18.5) {
+    //     console.log("abaixo do peso normal")
+    // }
+    // if (imc >= 18.5 && imc <= 24.9) {
+    //     console.log("peso normal")
+    // }
+    // if (imc >= 25 && imc <= 29.9) {
+    //     console.log("excesso de peso")
+    // }
+    // if (imc >= 30 && imc <= 34.9) {
+    //     console.log("obesidade classe 1")
+    // }
+    // if (imc >= 35 && imc <= 39.9) {
+    //     console.log("obesidade classe 2")
+    // }
+    // if (imc >= 40) {
+    //     console.log("obesidade classe 3")
+    // }
+
+    /* Exercício 04
+    compras
+
+    crie um script com a seguinte situação. uma variável com valor total da compra.
+     tipos de pagamentos: pix, débito, crédito, parcelado no cartão, parcelado no carnê.
+      se for pix, aplica-se um desconto de 10%; se for no débito, valor original; se for
+       crédito em 1x, acréscimo de 5%; se for parcelado no cartão, acréscimo de 10% por
+       parcela; se for parcelado no carnê, acréscimo de 20% por parcela; se a compra for
+       feita em cartão, tanto em crédito ou em débito, verificar se tem o valor disponível
+        no cartão; o valor do cartão será dada por uma variável aparecer a forma de pagamento,
+    quantas vezes foi escolhido, se for parcelado aparecer o valor total e valor de cada parcela. */
+
+
+
+    let valortotal = 2500;
+    let resultado = 0;
+    let formapgto = "credito"
+    let limitecar = 2500;
+    let qtdparc = 5;
+
+
+    switch (formapgto) {
+        case "pix":
+            resultado = valortotal * 0.90;
+            console.log("Valor da compra R$" + resultado);
+            break;
+
+        case "debito":
+            if (limitecar >= valortotal) {
+
+                console.log("Pode Comprar Limite R$" + limitecar)
+            }
+            else {
+                console.log("Não pode Comprar limite R$" + limitecar)
+            }
+
+        case "debito":
+            resultado = valortotal;
+            console.log("Valor da compra R$" + resultado);
+
+            break;
+
+        case "credito":
+            if (limitecar >= (valortotal + (valortotal * 0.05))) {
+
+                console.log("Pode Comprar Limite R$" + limitecar)
+            }
+            else {
+                console.log("Não pode Comprar limite R$" + limitecar)
+            }
+            resultado = valortotal + (valortotal * 0.05);
+            console.log("Valor da compra R$" + resultado);
+            if (valortotal / qtdparc)
+                console.log("Valor da parela R$" + ((valortotal * 0.05 + valortotal) / qtdparc))
+            break;
+
+        case "carne":
+        case "pix":
+            resultado = valortotal + (valortotal * 0.20);
+            console.log("Valor da compra R$" + resultado);
+            if (valortotal / qtdparc)
+                console.log("Valor da parela R$" + ((valortotal * 0.20 + valortotal) / qtdparc))
+            break;
+
+    }
+
+    /* Exercício 05 - Desafio
+
+Lista de filmes:
+
+Escreva um script que, de acordo com a opção escolhida, mostrará as opções para o usuário.
+Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme.
+Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no
+console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro
+do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que
+a idade > do usuário pode assistir. */
+
+    // let idade = "14"
+    // let acao = 14;
+    // let romance = 10;
+    // let comedia = "8";
+    // let animacao = "0";
+    // let suspense = "16";
+    // let terror = "18";
+
+    // if (idade >= acao) {
+    //     console.log("Bom filme")
+    // }
+    // else if (idade < acao) {
+    //     console.log("Esse título não é para sua idade. Você pode assistir animação que é livre.")
+
+    // }
+
+    // if (idade >= romance) {
+    //     console.log(bom filme)
+    // }
+    // else if (idade < romance) {
+    //     console.log("Este título não é para sua idade. É recomendado assistir comédia ou animação.")
+    // }
+
+
+
+
+
 
 
 
