@@ -5,20 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Array - Exercícios</title>
 </head>
 <script>
     /* Exemplo Array - estrutura */
 
+    // let somanotas = 0;
+    // let array = [6, 10, 5];
+    // console.log('Hello World! ' + array);
+
+    // for (let index = 0; index < array.length; index++) {
+    //     somanotas = somanotas + array[index];
+    // }
+
+    // let media = somanotas / array.length;
+    // console.log(somanotas);
+    // console.log(media);
+
+    /* Exemplo Array - exercício */
+
     let somanotas = 0;
-    let array = [6, 10, 5];
-    console.log('Hello World! ' + array);
+    let array = [6, 10, 5, 4, 5, 9, 0];
+    console.log(array)
+
+    for (let index = 0; index < array.length; index++) {
+        somanotas = somanotas + array[index];
+    }
+
+    let media = somanotas / array.length;
+
+    array.forEach(function (item, indice, array) {
+        console.log(item, indice);
+    });
+
+
+    /* -----------------------------------*/
+
+
+    /* 05 - Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas. Este
+    deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura
+    do grupo;*/
+
+
+
+    /* -----------------------------------*/
+
+    /* 06 - Escrever um algoritmo que leia 10 números e conte quantos deles estão nos
+    seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade
+     de vezes que aparece cada intervalo. [array]*/
+
+
+
+    /* -----------------------------------*/
+
+    /* 07 - Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números
+     pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]*/
+
+
+
+    /* -----------------------------------*/
+
+    /* 08 - escreva um script que leia 15 números positivos, econtre o maior deles e o menos
+     deles, e mostre na tela. [array]*/
+
+
+
+    /* -----------------------------------*/
 
 
 </script>
 
 <body>
-<h1>HELLO WORLD</h1>
+    <h1>HELLO WORLD</h1>
 </body>
 
 </html>
