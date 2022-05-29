@@ -251,57 +251,57 @@
 
 
 
-    let valortotal = 2500;
-    let resultado = 0;
-    let formapgto = "credito"
-    let limitecar = 2500;
-    let qtdparc = 5;
+    // let valortotal = 2500;
+    // let resultado = 0;
+    // let formapgto = "credito"
+    // let limitecar = 2500;
+    // let qtdparc = 10;
 
 
-    switch (formapgto) {
-        case "pix":
-            resultado = valortotal * 0.90;
-            console.log("Valor da compra R$" + resultado);
-            break;
+    // switch (formapgto) {
+    //     case "pix":
+    //         resultado = valortotal * 0.90;
+    //         console.log("Valor da compra R$" + resultado);
+    //         break;
 
-        case "debito":
-            if (limitecar >= valortotal) {
+    //     case "debito":
+    //         if (limitecar >= valortotal) {
 
-                console.log("Pode Comprar Limite R$" + limitecar)
-            }
-            else {
-                console.log("Não pode Comprar limite R$" + limitecar)
-            }
+    //             console.log("Pode Comprar Limite R$" + limitecar)
+    //         }
+    //         else {
+    //             console.log("Não pode Comprar limite R$" + limitecar)
+    //         }
 
-        case "debito":
-            resultado = valortotal;
-            console.log("Valor da compra R$" + resultado);
+    //     case "debito":
+    //         resultado = valortotal;
+    //         console.log("Valor da compra R$" + resultado);
 
-            break;
+    //         break;
 
-        case "credito":
-            if (limitecar >= (valortotal + (valortotal * 0.05))) {
+    //     case "credito":
+    //         if (limitecar >= (valortotal + (valortotal * 0.05))) {
 
-                console.log("Pode Comprar Limite R$" + limitecar)
-            }
-            else {
-                console.log("Não pode Comprar limite R$" + limitecar)
-            }
-            resultado = valortotal + (valortotal * 0.05);
-            console.log("Valor da compra R$" + resultado);
-            if (valortotal / qtdparc)
-                console.log("Valor da parela R$" + ((valortotal * 0.05 + valortotal) / qtdparc))
-            break;
+    //             console.log("Pode Comprar Limite R$" + limitecar)
+    //         }
+    //         else {
+    //             console.log("Não pode Comprar limite R$" + limitecar)
+    //         }
+    //         resultado = valortotal + (valortotal * 0.05);
+    //         console.log("Valor da compra R$" + resultado);
+    //         if (valortotal / qtdparc)
+    //             console.log("Valor da parela R$" + ((valortotal * 0.05 + valortotal) / qtdparc))
+    //         break;
 
-        case "carne":
-        case "pix":
-            resultado = valortotal + (valortotal * 0.20);
-            console.log("Valor da compra R$" + resultado);
-            if (valortotal / qtdparc)
-                console.log("Valor da parela R$" + ((valortotal * 0.20 + valortotal) / qtdparc))
-            break;
+    //     case "carne":
+    //     case "pix":
+    //         resultado = valortotal + (valortotal * 0.20);
+    //         console.log("Valor da compra R$" + resultado);
+    //         if (valortotal / qtdparc)
+    //             console.log("Valor da parela R$" + ((valortotal * 0.20 + valortotal) / qtdparc))
+    //         break;
 
-    }
+    // }
 
     /* Exercício 05 - Desafio
 
@@ -314,28 +314,69 @@ console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificaç
 do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que
 a idade > do usuário pode assistir. */
 
-    // let idade = "14"
-    // let acao = 14;
-    // let romance = 10;
-    // let comedia = "8";
-    // let animacao = "0";
-    // let suspense = "16";
-    // let terror = "18";
+    let genero = "romance"
+    let idade = "9"
+    let acao = 14;
+    let romance = 10;
+    let comedia = 8;
+    let animacao = 0;
+    let suspense = 16;
+    let terror = 18;
 
-    // if (idade >= acao) {
-    //     console.log("Bom filme")
-    // }
-    // else if (idade < acao) {
-    //     console.log("Esse título não é para sua idade. Você pode assistir animação que é livre.")
+    switch (genero) {
+        case "ação":
+            // case "idade"
+            if (idade >= acao)
+                console.log("Bom filme");
 
-    // }
+            else
+                console.log("Esse título não é para menor de 14 anos. Recomendamos verificar as categorias a seguir: animação (livre), comedia (8 anos) ou romance (10 anos).");
+            break;
 
-    // if (idade >= romance) {
-    //     console.log(bom filme)
-    // }
-    // else if (idade < romance) {
-    //     console.log("Este título não é para sua idade. É recomendado assistir comédia ou animação.")
-    // }
+        case "romance":
+
+            if (idade >= romance)
+                console.log("Bom filme");
+
+            else
+                console.log("Esse título não é para menor de 10 anos. Recomendamos verificar as categorias a seguir: comédia (8 anos) ou animação (livre).");
+            break;
+
+        case "comédia":
+
+            if (idade >= comedia)
+                console.log("Bom filme");
+
+            else
+                console.log("Esse título não é para menor de 8 anos. Recomendamos assistir animação (livre).");
+            break;
+
+        case "animação":
+
+            if (idade >= animacao)
+                console.log("Bom filme");
+
+            break;
+        case "suspense":
+
+            if (idade >= suspense)
+                console.log("Bom filme");
+
+            else 
+            console.log("Esse título não é para menor de 16 anos. Recomendamos verificar as categorias a seguir: animação (livre), comédia (8 anos), romance (10 anos) ou ação (14 anos).");
+            break;
+
+        case "terror":
+
+            if (idade >= terror)
+                console.log("Bom filme");
+
+            else 
+            console.log("Esse título não é para menor de 18 anos. Recomendamos verificar as categorias a seguir: animação (livre), comédia (8  anos), romance (10 anos), ação (14 anos) ou suspense (16 anos).");
+            break;
+    }
+
+
 
 
 
