@@ -12,8 +12,35 @@
 
 <script>
 
-//Escrever um algoritmo que leia 10 números e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade de vezes que aparece cada intervalo. [array]
-   
+    //Escrever um algoritmo que leia 10 números e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade de vezes que aparece cada intervalo. [array]
+
+    let array = [17, 16, 15, 65, 71, 80, 18, 90, 92, 89, 33]
+
+    let count1 = 0;
+    let count2 = 0;
+    let count3 = 0;
+    let count4 = 0;
+
+    for (let index = 0; index < array.length; index++) {
+        if (array[index] <= 25) {
+            count1++;
+        }
+        else if (array[index] <= 50) {
+            count2++;
+        }
+        else if (array[index] <= 76) {
+            count3++;
+        }
+        else if (array[index] <= 100) {
+            count4++;
+        }
+
+    }
+    console.log(count1);
+    console.log(count2);
+    console.log(count3);
+    console.log(count4);
+
 </script>
 
 <body>

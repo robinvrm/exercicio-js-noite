@@ -12,8 +12,38 @@
 
 <script>
 
-//Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]
-   
+    //Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]
+
+    let array = [5, 9, 15, 7, 2, 6];
+    let countPar = 0;
+    let countImpar = 0;
+    let verifica = 0;
+    let somaPar = 0;
+    let somaImpar = 0;
+    let mediaPar = 0;
+    let mediaGeral = 0;
+
+    for (let index = 0; index < array.length; index++) {
+        verifica = array[index] % 2;
+        if (verifica == 0) {
+            somaPar = array[index] + somaPar;
+            // 2-8
+            countPar++;
+        } else {
+            somaImpar = array[index] + somaImpar;
+            // 5-14-29-36
+            countImpar++;
+        }
+
+
+    }
+    mediaPar = somaPar / countPar;
+    mediaGeral = (somaPar + somaImpar) / (countPar + countImpar);
+
+    console.log(countImpar);
+    console.log(mediaPar);
+    console.log(mediaGeral);
+
 </script>
 
 <body>
