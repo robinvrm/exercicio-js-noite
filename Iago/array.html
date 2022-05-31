@@ -24,19 +24,19 @@
 
     /* Exemplo Array - exercício */
 
-    let somanotas = 0;
-    let array = [6, 10, 5, 4, 5, 9, 0];
-    console.log(array)
+    // let somanotas = 0;
+    // let array = [6, 10, 5, 4, 5, 9, 0];
+    // console.log(array)
 
-    for (let index = 0; index < array.length; index++) {
-        somanotas = somanotas + array[index];
-    }
+    // for (let index = 0; index < array.length; index++) {
+    //     somanotas = somanotas + array[index];
+    // }
 
-    let media = somanotas / array.length;
+    // let media = somanotas / array.length;
 
-    array.forEach(function (item, indice, array) {
-        console.log(item, indice);
-    });
+    // array.forEach(function (item, indice, array) {
+    //     console.log(item, indice);
+    // });
 
 
     /* -----------------------------------*/
@@ -46,6 +46,50 @@
     deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura
     do grupo;*/
 
+    // let maioralt = 0;
+    // let menoralt = 0;
+
+    var numeros = [193, 150, 165, 167, 170, 172, 175, 176, 177, 179, 181, 183, 185, 187, 125];
+
+    var maiornumero = 0;
+    var menornumero = 10000;
+
+    for (var i = 0; i < numeros.length; i++) {
+
+        var numero = numeros[i];
+
+        if (numero > maiornumero) {
+            maiornumero = numero;
+        }
+
+    }
+
+    console.log(maiornumero);
+
+
+    for (var i = 0; i < numeros.length; i++) {
+
+        var numero = numeros[i];
+
+        if (numero < menornumero)
+            menornumero = numero;
+    }
+
+    console.log(menornumero)
+
+    // for (let i = 0; i < array.length; i++) {
+    //     vetor[i] =
+
+    //     if (i > maioralt) {
+    //         maioralt = i;
+    //     }
+    //     else if (i < menoralt) {
+    //         menoralt = i;
+    //     }
+
+    // }
+    // console.log(' maior elemento ' + maioralt)
+    // console.log('menor elemento ' + menoralt)
 
 
     /* -----------------------------------*/
@@ -76,7 +120,7 @@
 </script>
 
 <body>
-    <h1>HELLO WORLD</h1>
+    <h1>HELLO WORLD!</h1>
 </body>
 
 </html>
