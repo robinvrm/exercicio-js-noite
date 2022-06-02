@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
 
-<!-- Array é uma variável com vários coisas dentro. (lista)
+<body>
+
+
+    <!-- Array é uma variável com vários coisas dentro. (lista)
 Inicia da posição zero. 
 
 let array = ['banana', 'melancia'];
@@ -27,12 +29,12 @@ let media = somaNotas / array.lenth;
 console.log(somaNotas);
 console.log(media); -->
 
-<!-- MOSTRAR POR POSIÇÃO E QUAL ARRAY
+    <!-- MOSTRAR POR POSIÇÃO E QUAL ARRAY
 array.forEach(function (item, indice, array) {
     console.log (item, indice);
     }); -->
 
-EXERCICIO 1 - array
+    <!-- EXERCICIO 1 - array
 
 EXERCICIO 7
 07 - Faça um algoritmo que leia 6 valores positivos. 
@@ -67,15 +69,74 @@ Calcule a quantidade de números pares e ímpares, a média de valores pares e a
     }
     console.log(countImpar);
     console.log(mediaPar);
-    console.log(mediaGeral);
-      
-        
+    console.log(mediaGeral); -->
+    <script>
+
+        let baseGerente = 0;
+        let minimoMerito = 20000;
+        let SomaBaseAtual = 0;
+        let valormerito = 800;
+        let baseUnidade = [
+            132091.35,
+            107262.59,
+            24422.35,
+            28889.29,
+            148347.45,
+            64635.84,
+            30421.26,
+            15000,
+            22585.53
+        ];
+        let caixaAtual = [
+            139204.36,
+            99152.61,
+            27806.93,
+            35363.27,
+            173191.01,
+            61822.37,
+            28306.43,
+            46928.11,
+            18644.67
+        ];
+        let pastasUnidades = [
+            87,
+            24,
+            47,
+            20,
+            35,
+            15,
+            42,
+            29,
+            29
+        ];
+let somaBaseAnterior = 0;
+        for (let index = 0; index <pastasUnidades.length; index++) {;
+            somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+        }
+        if (pastasUnidades [index] >=20) {
+            if (caixaAtual [index] > baseUnidade [index]) {
+              SomaBaseAtual = SomaBaseAtual + caixaAtual[index]; }
+            console.log(pastasUnidades[index]);
+        }
+    if (pastasUnidades [index] < 20) {
+        if  (caixaAtual [index] > baseUnidade [index]) { 
+            SomaBaseAtual = SomaBaseAtual + baseUnidade[index];
+    }
+
+    if (caixaAtual[index] < baseUnidade[index] ){
+        SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
+    }
+    }
+
+    console.log(SomaBaseAtual);
+    
 
 
 
 
 
-</script>
+
+    </script>
 
 
 
@@ -97,4 +158,5 @@ Calcule a quantidade de números pares e ímpares, a média de valores pares e a
 
 
 </body>
+
 </html>
