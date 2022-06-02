@@ -42,41 +42,50 @@
     /* -----------------------------------*/
 
 
-    /* 05 - Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas. Este
-    deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura
-    do grupo;*/
+    /* 05 - Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas.
+     Este deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura
+    do grupo;
+    
+    Exemplo metodo de ordenação:
 
-      var numeros = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
-
-
-      function bubbleSort(arr) {
-    var length = arr.length;  
-    for (var i = 0; i < length; i++) { 
-        for (var j = 0; j < (length - i - 1); j++) { 
-            if(arr[j] > arr[j+1]) {
-                var tmp = arr[j]; 
-                arr[j] = arr[j+1]; 
-                arr[j+1] = tmp; 
+    function bubbleSort(arr) {
+        var length = arr.length;
+        for (var i = 0; i < length; i++) {
+            for (var j = 0; j < (length - i - 1); j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
             }
-        }        
+        }
     }
-}
+    var arr = [5, 4, 3, 2, 1];
+    bubbleSort(arr);
+
+    console.log(arr);
+    */
+
+    var numeros = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
+
+    function bubbleSort(numeros) {
+        var length = numeros.length;
+        for (var i = 0; i < length; i++) {
+            for (var j = 0; j < (length - i - 1); j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    var tmp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = tmp;
+                }
+            }
+        }
+    }
 
 
 
-var arr = [5, 4, 3, 2, 1]; 
-bubbleSort(arr);
-
-console.log(arr);
 
 
-
-
-
-
-
-
-    // var maiornumero = 0;
+       // var maiornumero = 0;
     // var menornumero = 10000;
 
     // for (var i = 0; i < numeros.length; i++) {
@@ -116,34 +125,34 @@ console.log(arr);
     /* 07 - Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números
      pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]*/
 
-    let array = [5, 9, 15, 7, 2, 6];
-    let countpar = 0;
-    let countimpar = 0;
-    let verifica = 0;
-    let somapar = 0;
-    let somaimpar = 0;
-    let mediapar = 0;
-    let mediageral = 0;
+    // let array = [5, 9, 15, 7, 2, 6];
+    // let countpar = 0;
+    // let countimpar = 0;
+    // let verifica = 0;
+    // let somapar = 0;
+    // let somaimpar = 0;
+    // let mediapar = 0;
+    // let mediageral = 0;
 
-    for (let index = 0; index < array.length; index++) {
-        verifica = array[index] % 2;
-        if (verifica == 0) {
-            somapar = array[index] + somapar;
-            countpar++;
+    // for (let index = 0; index < array.length; index++) {
+    //     verifica = array[index] % 2;
+    //     if (verifica == 0) {
+    //         somapar = array[index] + somapar;
+    //         countpar++;
 
-        } else {
-            somaimpar = array[index] + somaimpar;
-            countimpar++;
-        }
-    }
+    //     } else {
+    //         somaimpar = array[index] + somaimpar;
+    //         countimpar++;
+    //     }
+    // }
 
-    mediapar = somapar / countpar;
-    mediageral = (somapar+somaimpar) / (countpar+countimpar);
+    // mediapar = somapar / countpar;
+    // mediageral = (somapar+somaimpar) / (countpar+countimpar);
 
-    console.log(countimpar);
-    console.log(countpar);
-    console.log(mediapar);
-    console.log(mediageral);
+    // console.log(countimpar);
+    // console.log(countpar);
+    // console.log(mediapar);
+    // console.log(mediageral);
 
 
 
