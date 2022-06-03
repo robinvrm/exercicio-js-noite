@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    //Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas. Este programa deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura do grupo
+
+    let array = [170, 160, 150, 165, 171, 180, 186, 190, 192, 189, 173, 182, 155, 177, 188]
+
+    let menorAltura = 0;
+    let maiorAltura = 0;
+
+    function bubbleSort(array) {
+        for (let j = 0; j > array.length - 1; j++) {
+            for (let i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    [array[i], array[i + 1] = [array[i + 1], array[i]]
+                }
+            }
+        }
+
+        // return array;
+    }
+    bubbleSort(array);
+
+    console.log('A menor altura do grupo é ' + array[0] + 'e a maior altura do grupo é ' + array.length - 1);
+
+// tem algo errado
+
+    // https://www.youtube.com/watch?v=ZYO43bi0IXY 
+
+</script>
+
+<body>
+
+</body>
+
+</html>

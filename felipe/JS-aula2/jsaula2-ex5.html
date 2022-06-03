@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    //Escreva um script que, de acordo com a opção escolhida, mostrará as opções para o usuário. As opções serão:
+
+    // Gênero 	Classificação Indicativa
+    // Ação 	14
+    // Romance 	10
+    // Comédia 	8
+    // Animação Livre
+    // Suspense 16
+    // Terror 	18
+
+    // Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme. Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que a idade > do usuário pode assistir.
+
+    let genero = 'acao';
+    let idade = 10;
+
+    switch (genero) {
+        case 'acao':
+            if (idade < 14) {
+                console.log('Esse título não é para sua idade. Você pode assistir: Animação, Comédia e Romance.');
+            }
+            else if (idade >= 14) {
+                console.log('Bom filme.');
+            }
+            break;
+        case 'romance':
+            if (idade < 10) {
+                console.log('Esse título não é para sua idade. Você pode assistir: Animação e Comédia.');
+            }
+            else if (idade >= 10) {
+                console.log('Bom filme.');
+            }
+            break;
+        case 'comedia':
+            if (idade < 8) {
+                console.log('Esse título não é para sua idade. Você pode assistir: Animação.');
+            }
+            else if (idade >= 8) {
+                console.log('Bom filme.');
+            }
+            break;
+        case 'animacao':
+            console.log('Bom filme.');
+            break;
+        case 'suspense':
+            if (idade < 16) {
+                console.log('Esse título não é para sua idade. Você pode assistir: Animação, Comédia, Romance e Ação.');
+            }
+            else if (idade >= 16) {
+                console.log('Bom filme.');
+            }
+            break;
+        case 'terror':
+            if (idade < 18) {
+                console.log('Esse título não é para sua idade. Você pode assistir: Animação, Comédia, Romance, Ação e Suspense.');
+            }
+            else if (idade >= 18) {
+                console.log('Bom filme.');
+            }
+            break;
+
+        default:
+            console.log('Tente outro gênero.');
+    }
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
