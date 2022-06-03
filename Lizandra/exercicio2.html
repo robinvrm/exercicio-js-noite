@@ -3,7 +3,7 @@
     // let cargo = "gerente";
     // let salario = 2000;
     // let val;
-// case é uma escolha
+    // case é uma escolha
     // switch (cargo) {
     //     case "gerente": 
     //     val = salario*1.1
@@ -20,7 +20,7 @@
     //     break;
     // }
 
-// EXERCÍCIO 2
+    // EXERCÍCIO 2
     // let valorum = 10;
     // let valordois = 20;
     // let resultado;
@@ -33,7 +33,7 @@
     //            break;
     //    }
 
-// EXERCÍCIO 3
+    // EXERCÍCIO 3
     // let peso = 80;
     // let altura = 1.62;
     // let imc = peso / (altura * altura);
@@ -94,22 +94,78 @@
 
     //     case "parcelado carne":
     //         valor_total = valor_total + valor_total *0.20;
-            //    if ( limite > valor_total ) {
+    //    if ( limite > valor_total ) {
     //             console.log("a forma de pgmento é " + opcaoCompra)
     //             console.log("parcelado em 10x")
     //             console.log("o valor de cada parcela é " + valor_total / parcelas)
     //         console.log(valor_total);
     //         break;   
 
-           EXERCICIO 5
+    //   " EXERCICIO 
+    let genero = 'açao';
+    let idadeuser = 10;
 
-           
-
-
-        
-
-        default:
+    switch (genero) {
+        case "açao":
+            if (idadeuser >= 14) {
+                console.log("Bom filme")
+            }
+            else if (idadeuser < 10) {
+                console.log("Esse título não é para sua Idade, pode assistir Comédia e Animação")
+            }
+            else if (idadeuser < 8) {
+                console.log("Esse título não é para sua Idade, pode assistir Animação")
+            }
             break;
+
+            case "romance":
+            if (idadeuser >= 10) {
+                console.log("Bom filme")
+            }
+            else if (idadeuser < 8) {
+                console.log("Esse título não é para sua Idade, pode assistir Animação")
+            }
+             break;
+
+             case "comedia":
+            if (idadeuser >= 8) {
+                console.log("Bom filme")
+            }
+            else if (idadeuser < 8) {
+                console.log("Esse título não é para sua Idade, pode assistir Animação")
+            }
+             break;
+
+             case "Animação":
+            if (idadeuser >= 0) {
+                console.log("Bom filme")
+           
+             break;
+             
+             case "Animação":
+             if (idadeuser >= 14) {
+                console.log("Bom filme")
+            }
+            else if (idadeuser < 10) {
+                console.log("Esse título não é para sua Idade, pode assistir Comédia e Animação")
+            }
+            else if (idadeuser < 8) {
+                console.log("Esse título não é para sua Idade, pode assistir Animação")
+            }
+            break;
+
+
+
+
+        default: break;
     }
+
+
+
+
+
+
+
+
 
 </script>
