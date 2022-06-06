@@ -9,49 +9,57 @@
 </head>
 <script>
 
-   let basegerente = 0;
-   let minimomerito = 20000;
-   let somabaseatual = 0;
-   let somabaseanterior = 0;
+    let basegerente = 0;
+    let minimomerito = 20000;
+    let somabaseatual = 0;
+    let somabaseanterior = 0;
+    let saltoatual = 0;
 
     let baseunidade = [132091.35, 107262.59, 24422.35, 28889.29, 148347.45, 64635.84, 30421.26, 15000, 22585.53];
 
     let caixaatual = [139204.36, 99152.61, 27806.93, 35363.27, 173191.01, 61822.37, 28306.43, 46928.11, 18644.67];
 
-    let pastasunidades = [87,24,47,20,35,15,42,29,29];
+    let pastasunidades = [87, 24, 47, 20, 35, 15, 42, 29, 29];
 
     for (let index = 0; index < pastasunidades.length; index++) {
-        somabaseanterior = somabaseanterior + baseunidade [index];
-       
-        if (pastasunidades [index] >= 20) {
-            somabaseatual = somabaseatual + caixaatual [index];
+        somabaseanterior = somabaseanterior + baseunidade[index];
+
+        if (pastasunidades[index] >= 20) {
+            somabaseatual = somabaseatual + caixaatual[index];
         }
-           if (pastasunidades [index] < 20)
-                if (caixaatual [index] > baseunidade[index]) {
-                    somabaseatual = somabaseatual + baseunidade [index];
-                }
-                if (caixaatual [index] < baseunidade [index]) {
-                    somabaseatual = somabaseatual + caixaatual [index];
-                }
+        if (pastasunidades[index] < 20)
+            if (caixaatual[index] > baseunidade[index]) {
+                somabaseatual = somabaseatual + baseunidade[index];
             }
+        if (caixaatual[index] < baseunidade[index]) {
+            somabaseatual = somabaseatual + caixaatual[index];
+        }
+        if (somabaseatual[index] > somabaseanterior[index]) {
 
-            for (let index = 0; index < baseunidade.length; index++) {
-                baseunidade = baseunidade + baseunidade [index];
-            }
+            saldoatual = saldoatual + (caixaatual[index] - baseunidade[index]);
+        }
 
-            console.log(somabaseatual);
+    }
 
-            console.log(baseunidade)
 
-            
+    console.log(somabaseatual);
+    console.log(somabaseanterior);
 
-        /* 2.270,56*/
+    console.log(saldoatual);
+
+    console.log(baseunidade);
+    console.log(caixaatual);
+
+
+
+    /* 2.270,56*/
 
 
 
 </script>
 
 <body>
+    <h1>HELLO WORLD!</h1>
 
 </body>
 

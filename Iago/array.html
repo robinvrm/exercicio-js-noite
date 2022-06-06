@@ -64,29 +64,52 @@
     bubbleSort(arr);
 
     console.log(arr);
-    */
 
-    var numeros = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
+    Exemplo Bubble Sort
 
-    function bubbleSort(numeros) {
-        var length = numeros.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < (length - i - 1); j++) {
-                if (numeros[j] > numeros[j + 1]) {
-                    var tmp = numeros[j];
-                    numeros[j] = numeros[j + 1];
-                    numeros[j + 1] = tmp;
-                }
-            }
+    let bubble = [82, 76, 6, 52, 45, 38, 24, 14, 54, 85, 143, 98, 65, 512, 96, 12, 4, 79];
+    
+function bubbleSort () {
+    for (let i = 0; i < bubble.length; i++) {
+        if (bubble[i] > bubble[i +1]) {
+            let v1 = bubble[i]
+            let v2 = bubble[i +1] 
+            bubble[i] = v2
+            bubble[i +1] = v1
         }
     }
-    console.log(i)
+}
 
+for (let j = 0; j < bubble.length ; j++) {
+    bubbleSort();
+}
 
+console.log(bubble)
 
+    */
 
+    // var numeros = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
 
-       // var maiornumero = 0;
+    // let bubble = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
+
+    // function bubbleSort() {
+    //     for (let i = 0; i < bubble.length; i++) {
+    //         if (bubble[i] > bubble[i + 1]) {
+    //             let v1 = bubble[i]
+    //             let v2 = bubble[i + 1]
+    //             bubble[i] = v2
+    //             bubble[i + 1] = v1
+    //         }
+    //     }
+    // }
+
+    // for (let j = 0; j < bubble.length; j++) {
+    //     bubbleSort();
+    // }
+
+    // console.log(bubble)
+
+    // var maiornumero = 0;
     // var menornumero = 10000;
 
     // for (var i = 0; i < numeros.length; i++) {
@@ -119,6 +142,34 @@
     seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade
      de vezes que aparece cada intervalo. [array]*/
 
+    let numeros = [-1, 1, 27, 52, 75, 76, 125, 128, 200, 250];
+
+    let intervalo025 = 0;
+    let intervalo2650 = 0;
+    let intervalo5175 = 0;
+    let intervalo76100 = 0;
+
+    for (index = 0; index < numeros.length; index++) {
+
+        if (intervalo025 >= 0 && intervalo025 <= 25) {
+            intervalo025 = intervalo025 + numeros[index];
+
+        }
+
+
+    }
+    console.log(intervalo025);
+
+
+    // console.log(intervalo025);
+    // condoe.log(intervalo2650);
+    // console.log(intervalo5175);
+    // console.log(intervalo76100);
+
+
+
+
+    // console.log(intervalo025)
 
 
     /* -----------------------------------*/
@@ -159,8 +210,27 @@
 
     /* -----------------------------------*/
 
-    /* 08 - escreva um script que leia 15 números positivos, econtre o maior deles e o menos
+    /* 08 - escreva um script que leia 15 números positivos, econtre o maior deles e o menor
      deles, e mostre na tela. [array]*/
+
+    // let bubble = [30, 42, 45, 71, 123, 80, 78, 7, 10, 19, 65, 47, 98, 12, 200,]
+
+    // function bubbleSort() {
+    //     for (let i = 0; i < bubble.length; i++) {
+    //         if (bubble[i] > bubble[i + 1]) {
+    //             let v1 = bubble[i]
+    //             let v2 = bubble[i + 1]
+    //             bubble[i] = v2
+    //             bubble[i + 1] = v1
+    //         }
+    //     }
+    // }
+
+    // for (let j = 0; j < bubble.length; j++) {
+    //     bubbleSort();
+    // }
+
+    // console.log(bubble)
 
 
 
