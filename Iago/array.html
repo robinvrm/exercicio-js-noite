@@ -142,7 +142,7 @@ console.log(bubble)
     seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade
      de vezes que aparece cada intervalo. [array]*/
 
-    let numeros = [-1, 1, 27, 52, 75, 76, 125, 128, 200, 250];
+    let numeros = [-1, 1, 27, 52, 75, 76, 78, 99, 200, 250];
 
     let intervalo025 = 0;
     let intervalo2650 = 0;
@@ -151,14 +151,23 @@ console.log(bubble)
 
     for (index = 0; index < numeros.length; index++) {
 
-        if (intervalo025 >= 0 && intervalo025 <= 25) {
-            intervalo025 = intervalo025 + numeros[index];
+        if (numeros[index] <= 25) {
+            intervalo025++;
 
+        } else if (numeros[index] > 25 && numeros[index] <= 50) {
+            intervalo2650++;
+        } else if (numeros[index] > 50 && numeros[index] <= 75) {
+            intervalo5175++;
+        } else if (numeros[index] > 75 && numeros[index] <= 100) {
+            intervalo76100++;
         }
 
 
     }
     console.log(intervalo025);
+    console.log(intervalo2650);
+    console.log(intervalo5175);
+    console.log(intervalo76100);
 
 
     // console.log(intervalo025);

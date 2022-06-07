@@ -13,7 +13,7 @@
     let minimomerito = 20000;
     let somabaseatual = 0;
     let somabaseanterior = 0;
-    let saltoatual = 0;
+    let saldoatual = 0;
 
     let baseunidade = [132091.35, 107262.59, 24422.35, 28889.29, 148347.45, 64635.84, 30421.26, 15000, 22585.53];
 
@@ -21,35 +21,42 @@
 
     let pastasunidades = [87, 24, 47, 20, 35, 15, 42, 29, 29];
 
+    verificabateumeta = 0;
+
     for (let index = 0; index < pastasunidades.length; index++) {
         somabaseanterior = somabaseanterior + baseunidade[index];
 
         if (pastasunidades[index] >= 20) {
             somabaseatual = somabaseatual + caixaatual[index];
         }
-        if (pastasunidades[index] < 20)
+        if (pastasunidades[index] < 20) {
             if (caixaatual[index] > baseunidade[index]) {
                 somabaseatual = somabaseatual + baseunidade[index];
             }
-        if (caixaatual[index] < baseunidade[index]) {
-            somabaseatual = somabaseatual + caixaatual[index];
-        }
-        if (somabaseatual[index] > somabaseanterior[index]) {
+            if (caixaatual[index] < baseunidade[index]) {
+                somabaseatual = somabaseatual + caixaatual[index];
+            }
+            if (somabaseatual[index] > somabaseanterior[index]) {
 
-            saldoatual = saldoatual + (caixaatual[index] - baseunidade[index]);
-        }
+                saldoatual = saldoatual + (caixaatual[index] - baseunidade[index]);
+            }
 
+        }
     }
 
+    merito = somabaseatual - somabaseanterior;
+    console.log(merito)
+
+    if (merito >= minimomerito) {
+        verificabateumeta = (merito / minimomerito) * 800;
+        console.log(verificabateumeta);
+
+    } else {
+        console.log('tente  outra vez')
+    }
 
     console.log(somabaseatual);
     console.log(somabaseanterior);
-
-    console.log(saldoatual);
-
-    console.log(baseunidade);
-    console.log(caixaatual);
-
 
 
     /* 2.270,56*/
