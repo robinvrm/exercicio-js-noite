@@ -14,27 +14,27 @@
 
     //escreva um script que leia 15 números positivos, econtre o maior deles e o menor deles, e mostre na tela. [array]
 
-    let array = [170, 160, 150, 165, 171, 180, 186, 190, 192, 189, 173, 182, 155, 177, 188]
+    let array = [170, 160, 150, 165, 171, 180, 186, 190, 192, 189, 173, 182, 155, 177, 188];
 
-    let maior = 0;
-    let menor = 0;
-
-    function bubbleSort(array) {
-        for (let j = 0; j > array.length - 1; j++) {
-            for (let i = 0; i < array.length - 1; i++) {
-                if (array[i] > array[i + 1]) {
-                    [array[i], array[i + 1] = [array[i + 1], array[i]]
-                }
+    // function bubbleSort(array) {
+    for (let j = 0; j > array.length; j++) {
+        for (let i = 0; i < array.length - j - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                var tmp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = tmp;
             }
         }
-
-        // return array;
     }
-    bubbleSort(array);
 
-    console.log('O menor número é ' + array[0] + 'e o maior número é ' + array.length - 1);
+    // return array;
+    // bubbleSort(array);
 
-// tem algo errado
+    console.log(array);
+    console.log(array[0]);
+    console.log(array[array.length - 1]);
+    console.log('O menor número é ' + array[0] + ' e o maior número é ' + array[array.length - 1]);
+
 </script>
 
 <body>
