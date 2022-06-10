@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // var carro = {
+
+    //     fabricante: 'Fiat',
+    //     modelo: 'Uno',
+    //     peso: '900 kg'
+    // }
+
+    // console.log(carro)
+
+    //*---------------------------------*//
+
+    // var veiculos = [
+    //     { tipo: 'carro', modelo: 'corsa' },
+    //     { tipo: 'moto', modelo: 'fazer 250' },
+    //     { tipo: 'avião', modelo: 'cesna' }
+
+    // ]
+
+    // console.log(veiculos[2].tipo);
+
+    //*---------------------------------*//
+
+    // let basegerente = 0;
+    // let minimomerito = 20000;
+    // let somabaseatual = 0;
+    // let somabaseanterior = 0;
+    // let saldoatual = 0;
+
+    // let baseunidade = [  , , ];
+
+    // let caixaatual = [  , , ];
+
+    // let pastasunidades = [, , ];
+
+    // verificabateumeta = 0;
+
+    // for (let index = 0; index < pastasunidades.length; index++) {
+    //     somabaseanterior = somabaseanterior + baseunidade[index];
+
+    //     if (pastasunidades[index] >= 20) {
+    //         somabaseatual = somabaseatual + caixaatual[index];
+    //     }
+    //     if (pastasunidades[index] < 20) {
+    //         if (caixaatual[index] > baseunidade[index]) {
+    //             somabaseatual = somabaseatual + baseunidade[index];
+    //         }
+    //         if (caixaatual[index] < baseunidade[index]) {
+    //             somabaseatual = somabaseatual + caixaatual[index];
+    //         }
+    //         if (somabaseatual[index] > somabaseanterior[index]) {
+
+    //             saldoatual = saldoatual + (caixaatual[index] - baseunidade[index]);
+    //         }
+
+    //     }
+    // }
+
+    // merito = somabaseatual - somabaseanterior;
+    // console.log(merito)
+
+    // if (merito >= minimomerito) {
+    //     verificabateumeta = (merito / minimomerito) * 800;
+    //     console.log(verificabateumeta);
+
+    // } else {
+    //     console.log('tente  outra vez')
+    // }
+
+    // console.log(somabaseatual);
+    // console.log(somabaseanterior);
+
+    // /* 2.270,56*/
+
+    //*---------------------------------*//
+
+    //*Exercício meritocracia em Objetos*//
+
+
+    let basegerente = 0;
+    let minimomerito = 20000;
+    let somabaseatual = 0;
+    let somabaseanterior = 0;
+    let saldoatual = 0;
+
+    verificabateumeta = 0;
+
+    var meritocracia = [
+        { baseunidade: '132091.35', caixaatual: '139204.36', pastasunidades: '87' },
+        { baseunidade: '107262.59', caixaatual: '99152.61', pastasunidades: '24' },
+        { baseunidade: '24422.35', caixaatual: '27806.93', pastasunidades: '47' },
+        { baseunidade: '28889.29', caixaatual: '35363.27', pastasunidades: '20' },
+        { baseunidade: '148347.45', caixaatual: '173191.01', pastasunidades: '35' },
+        { baseunidade: '64635.84', caixaatual: '61822.37', pastasunidades: '15' },
+        { baseunidade: '30421.26', caixaatual: '28306.43', pastasunidades: '42' },
+        { baseunidade: '15000', caixaatual: '46928.11', pastasunidades: '29' },
+        { baseunidade: '22585.53', caixaatual: '18644.67', pastasunidades: '29' }
+
+
+    ]
+
+    for (let index = 0; index < meritocracia.length; index++) {
+        somabaseanterior = somabaseanterior + meritocracia[index].baseunidade++;
+        // console.log(somabaseanterior);
+
+        if (meritocracia[index].pastasunidades >= 20) {
+            somabaseatual = somabaseatual + meritocracia[index].caixaatual++;
+            // console.log(somabaseatual);
+        }
+        if (meritocracia[index].pastasunidades < 20) {
+            if (meritocracia[index].caixaatual > meritocracia[index.baseunidade]) {
+                somabaseatual = somabaseatual + meritocracia[index].baseunidade++;
+            }
+            if (meritocracia[index].caixaatual < meritocracia[index].baseunidade) {
+                somabaseatual = somabaseatual + meritocracia[index].caixaatual++;
+            }
+            if (meritocracia[index].somabaseatual > meritocracia[index].somabaseanterior++) {
+
+                saldoatual = saldoatual + (meritocracia[index].caixaatual - meritocracia[index].baseunidade++);
+            }
+
+        }
+    }
+
+    merito = somabaseatual - somabaseanterior;
+    console.log(merito)
+
+    if (merito >= minimomerito) {
+        verificabateumeta = (merito / minimomerito) * 800;
+        console.log(verificabateumeta);
+
+    } else {
+        console.log('tente  outra vez')
+    }
+
+    console.log(somabaseatual);
+    console.log(somabaseanterior);
+
+
+    /* 2.270,56*/
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>
