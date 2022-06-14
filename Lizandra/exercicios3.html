@@ -109,33 +109,35 @@ Calcule a quantidade de números pares e ímpares, a média de valores pares e a
             29,
             29
         ];
-let somaBaseAnterior = 0;
-        for (let index = 0; index <pastasUnidades.length; index++) {;
+        let somaBaseAnterior = 0;
+        let verificaBateuMeta = 0;
+        for (let index = 0; index < pastasUnidades.length; index++) {
             somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
-        }
-        if (pastasUnidades [index] >=20) {
-            if (caixaAtual [index] > baseUnidade [index]) {
-              SomaBaseAtual = SomaBaseAtual + caixaAtual[index]; }
-            console.log(pastasUnidades[index]);
-        }
-    if (pastasUnidades [index] < 20) {
-        if  (caixaAtual [index] > baseUnidade [index]) { 
-            SomaBaseAtual = SomaBaseAtual + baseUnidade[index];
-    }
 
-    if (caixaAtual[index] < baseUnidade[index] ){
-        SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
-    }
-    }
+            if (pastasUnidades[index] >= 20) {
+                SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
+              
+            if (pastasUnidades[index] < 20) {
+                if (caixaAtual[index] > baseUnidade[index]) {
+                    SomaBaseAtual = SomaBaseAtual + baseUnidade[index];
+                }
 
-    console.log(SomaBaseAtual);
+                if (caixaAtual[index] < baseUnidade[index]) {
+                    SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
+                }
+            }
+        }
     
+        verificaBateuMeta = SomaBaseAtual - somaBaseAnterior;
+        if (verificaBateuMeta >= minimoMerito) {
+            verificaBateuMeta = (verificaBateuMeta / minimoMerito) * 800;
+        } else {
+            console.log("tente novamente");
+        }
 
-
-
-
-
-
+        console.log(somaBaseAnterior);
+        console.log(SomaBaseAtual);
+        console.log(verificaBateuMeta);
     </script>
 
 
