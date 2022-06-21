@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
 </head>
-<script>
+<!-- <script>
     // var num1 = 20;
     // var num2 = 15;
 
@@ -34,6 +34,8 @@
 
 
     function comparacao(idade) {
+
+        var idade = idade;
         if (idade >= 18) {
             console.log("maior de idade");
             document.body.style.background = "black";
@@ -46,13 +48,32 @@
         }
     }
 
-console.log(comparacao (26));
+    console.log(comparacao(26));
 
 
-</script>
+</script> -->
 
 <body>
 
 </body>
+<script>
+
+    function comparacao(idade) {
+
+        var idade = idade;
+        if (idade >= 18) {
+            console.log("maior de idade");
+            document.body.style.background = "black";
+            document.write('maior idade - ' + idade);
+        }
+        else {
+            console.log("menor de idade");
+            document.body.style.background = "red";
+            document.write('menor idade - ' + idade);
+        }
+    }
+
+    console.log(comparacao(15)); 
+</script>
 
 </html>
