@@ -1,39 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <script type="text/javascript" src="javascript.js"></script> -->
-        <title>Java</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" src="javascript.js"></script> -->
+    <title>Java</title>
+</head>
 
-    <script>
-        let verde = 10;
-        let amarelo = 20;
-        let vermelho = 30;
-        let azul = 40;
-        if (verde){
-            console.log('R$' + verde)
+<script>
+    // let verde = 10;
+    // let amarelo = 20;
+    // let vermelho = 30;
+    // let azul = 40;
+    // if (verde){
+    //     console.log('R$' + verde)
+    // }
+    // if (amarelo){
+    //     console.log('R$' +amarelo)
+
+    //  }  
+
+    // if (vermelho){
+    //     console.log('R$' + vermelho)
+
+    // }
+
+    // if (azul){
+    //     console.log('R$' + azul)
+    // }
+
+    // let 
+
+    // let cargo = "outros"
+    // let salario = 2000;
+    // let val;
+    // switch (cargo) {
+    //     case "gerente":
+    //         val = salario*1.10
+    //         console.log ("o resultado é:" + val);
+    //         break;
+    //     case "supervisor":
+    //         val = salario*1.50
+    //         console.log ("o resultado é:" + val)
+    //         break;
+    //     case "outros":
+    //         console.log ("o resultado é:" + salario);
+    //         break;
+
+    // }
+
+    // let val1 = 3;
+    // let val2 = 2;
+    // let resultado;
+    // let opcao = "divisao";
+
+    // switch (opcao) {
+    //     case "soma":
+    //     resultado = val1 + val2
+    //     console.log ("valor " + val1 + " valor " + val2 + " resultado " + resultado)
+
+    // }
+    // switch (opcao) {
+    //     case "multiplicacao":
+    //     resultado = val1 * val2
+    //     console.log ("valor " + val1 + "* valor " + val2 + " resultado " + resultado)
+    // }
+
+    // switch (opcao) {
+    //     case "divisao":
+    //     resultado = val1 / val2
+    //     console.log ("valor " + val1 + "/ valor " + val2 + " resultado " + resultado)
+    // }
+
+    // let  peso = 49;
+    // let altura = 1.63;
+    // let resultado;
+    // let imc = peso / (altura * altura);
+    //     // alert(imc);
+
+    // if (imc < 18.5) {
+    //     console.log("abaixo do peso normal")
+
+    // } else if (imc > 18.5 && imc < 24) {
+    //     console.log("peso normal")
+    // }
+
+
+    // let valor_total = 1000;
+    // let opcaoCompra = "debito";
+    // let limite = 5000
+    // let qtdparcelas = 0
+
+    // switch (opcaoCompra) {
+    //     case "pix":
+    //         valor_total = valor_total - valor_total * 0.1;
+    //         console.log(valor_total);
+    //         break;
+    //     case "debito":
+    //         valor_total = valor_total;
+    //         if (limite > valor_total) {
+    //             console.log("limite aprovado")
+    //         }
+    //         else {
+    //             console.log("não tem limite")
+    //         }
+    //         console.log(valor_total);
+    //         break;
+
+    //     case "credito":
+    //         valor_total = valor_total + valor_total * 0.05;
+    //         if (limite > valor_total) {
+    //             console.log("limite aprovado")
+    //         }
+    //         else {
+    //             console.log("não tem limite")
+    //         }
+    //         console.log(valor_total);
+    //         break;
+
+    //     case "parceladocartao":
+    //         valor_total = valor_total + valor_total * 0.1;
+    //         if (limite > valor_total) {
+    //             // console.log("limite aprovado")
+    //         }
+    //         else {
+    //             // console.log("não tem limite");
+    //         }
+    //         console.log(valor_total);
+    //         break;
+
+    //     case "parceladocarne":
+    //         valor_total = valor_total + valor_total * 0.2;
+    //         console.log(valor_total);
+    //         break;
+
+
+    //     default:
+    //         break;
+
+    // }
+    // if (opcaoCompra == "debito" || opcaoCompra == "credito" || opcaoCompra == "parceladocartao") {
+    //     if (limite > valor_total) {
+    //         console.log("limite aprovado")
+    //         console.log("A opção foi " + opcaoCompra + " quantidade de parcelas " + qtdparcelas);
+    //     }
+    //     else {
+    //         console.log("A opção foi " + opcaoCompra + ' ' + valor_total);
+    //     }
+    //     // if (qtdparcelas > 0) {
+    //     //     console.log("A opção foi " + opcaoCompra + " quantidade de parcelas " + qtdparcelas);
+
+    //     // } else {
+    //     //     console.log("A opção foi " + opcaoCompra + ' ' + valor_total);
+    //     // }
+    // }
+
+
+    // ex 5:
+
+
+    // let Genero = "acao";
+    // let idade = 14;
+
+    // switch(genero){ 
+    // case "acao"
+    //     if (idade >=14){
+    //         console.log("Bom Filme")
+    //     }
+    //     else {
+    //         console.log("Esse título não é para sua idade")
+    //     }
+    //     break;
+
+    // }
+
+    // Ex LOOP 
+
+    // let array = [5,9,15,7,2,6];
+    // let countPar = 0;
+    // let countImpar = 0;
+    // let verifica = 0;
+    // let somaPar = 0;
+    // let somaImpar = 0;
+    // let mediaPar = 0;
+    // let mediaGeral = 0;
+    // for (let index = 0; index < array.length; index++) {
+    //     verifica = array[index] % 2;
+    //     if (verifica == 0) {
+    //         somaPar =array [index] + somaPar;
+    //         countPar++;
+    //     }
+    //     else {
+    //         countImpar++;
+    //         somaImpar =array [index] + somaImpar;
+    //     }
+
+    // }
+    // mediaPar = somaPar/countPar;
+    // mediaGeral = (somaPar+somaImpar)/(countPar+countImpar);
+
+    // console.log(countImpar);
+    // console.log(countPar);
+    // console.log(mediaGeral);
+
+    // let baseGerente = 0;
+    // let minimoMerito = 20000;
+    // let somaBaseAtual = 0;
+
+    // let baseUnidade = [
+    //     132091.35,
+    //     107262.59,
+    //     24422.35,
+    //     28889.29,
+    //     148347.45,
+    //     64635.84,
+    //     30421.26,
+    //     15000,
+    //     22585.53
+    // ];
+    // let caixaAtual = [
+    //     139204.36,
+    //     99152.61,
+    //     27806.93,
+    //     35363.27,
+    //     173191.01,
+    //     61822.37,
+    //     28306.43,
+    //     46928.11,
+    //     18644.67
+    // ];
+    // let pastasUnidades = [
+    //     87,
+    //     24,
+    //     47,
+    //     20,
+    //     35,
+    //     15,
+    //     42,
+    //     29,
+    //     29
+    // ];
+    // let somaBaseAnterior = 0;
+    // let verificaBateuMeta = 0;
+    // for (let index = 0; index < baseUnidade.length; index++) {
+    //     somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+
+    //     if (pastasUnidades[index] >= 20) {
+    //         // if (caixaAtual[index] > baseUnidade[index]) {
+    //             somaBaseAtual = somaBaseAtual + caixaAtual[index];
+    //         // }
+    //         // console.log(pastasUnidades[index]);
+    //     }
+    //     if (pastasUnidades[index] < 20) {
+    //         if (caixaAtual[index] > baseUnidade[index]) {
+    //             somaBaseAtual = somaBaseAtual + baseUnidade[index];
+    //         }
+    //         if (caixaAtual[index] < baseUnidade[index]) {
+    //             somaBaseAtual = somaBaseAtual + caixaAtual[index];
+    //         }
+    //     }
+        
+    // }
+
+    // verificaBateuMeta = somaBaseAtual - somaBaseAnterior
+    // if (verificaBateuMeta >= minimoMerito) {
+    //     verificaBateuMeta = (verificaBateuMeta / minimoMerito) * 800;
+
+    // } else {
+    //     console.log('tente outra vez')
+    // }
+
+    // console.log(somaBaseAtual);
+    // // console.log(somaBaseAtual);
+    // // console.log(verificaBateuMeta)
+
+
+    let unidades = [
+        {baseUnidade: 132091.35, caixaAtual: 139204.36, pastasUnidades:87},
+        {baseUnidade: 107262.59, caixaAtual:99152.61, pastasUnidades:24},
+        {baseUnidade: 24422.35, caixaAtual:27806.93, pastasUnidades:47},
+        {baseUnidade: 28889.29, caixaAtual:35363.27, pastasUnidades:20},
+        {baseUnidade: 148347.45, caixaAtual:173191.01, pastasUnidades:35},
+        {baseUnidade: 64635.84, caixaAtual:61822.37, pastasUnidades:15},
+        {baseUnidade: 30421.26, caixaAtual:28306.43, pastasUnidades:42},
+        {baseUnidade: 15000, caixaAtual:46928.11, pastasUnidades:29},
+        {baseUnidade: 22585.53, caixaAtual:18644.67, pastasUnidades:29},
+    ]
+    let baseGerente = 0;
+    let minimoMerito = 20000;
+    let somaBaseAtual = 0;
+    
+    let somaBaseAnterior = 0;
+    let verificaBateuMeta = 0;
+
+    for (let index = 0; index < unidades.length; index++) {
+        somaBaseAnterior = somaBaseAnterior + unidades[index].baseUnidade;
+
+        if (unidades[index].pastasUnidades >= 20) {
+            // if (caixaAtual[index] > baseUnidade[index]) {
+                somaBaseAtual = somaBaseAtual + unidades[index].caixaAtual;
+            // }
+            // console.log(pastasUnidades[index]);
         }
-        if (amarelo){
-            console.log('R$' +amarelo)
-
-         }  
-         
-        if (vermelho){
-            console.log('R$' + vermelho)
-
+        if (unidades[index].pastasUnidades < 20) {
+            if (unidades[index].caixaAtual > unidades[index].baseUnidade) {
+                somaBaseAtual = somaBaseAtual + unidades[index].baseUnidade;
+            }
+            if (unidades[index].caixaAtual < unidades[index].baseUnidade) {
+                somaBaseAtual = somaBaseAtual + unidades[index].caixaAtual;
+            }
         }
+        
+    }
 
-        if (azul){
-            console.log('R$' + azul)
-        }
+    verificaBateuMeta = somaBaseAtual - somaBaseAnterior
+    if (verificaBateuMeta >= minimoMerito) {
+        verificaBateuMeta = (verificaBateuMeta / minimoMerito) * 800;
 
-        let 
+    } else {
+        console.log('tente outra vez')
+    }
 
-    </script>
+    
+    console.log(somaBaseAtual);
+    console.log(verificaBateuMeta)
+
+// let animal = [
+// {tipo:"cachorro", raca:"Yorkshire"},
+// {tipo:"gato", raca:"persa"},
+// {tipo:"coelho",raca:"mini loop"},
+// ]
+// console.log(animal)
+
+
+</script>
 
 
 </html>
