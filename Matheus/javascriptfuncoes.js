@@ -39,29 +39,29 @@
 
 // }
 
-let array = [5, 10, 15, 7, 2, 3];
-let countPar = 0;
-let countImpar = 0;
-let verifica = 0;
-let somaPar = 0;
-let somaImpar = 0;
-let mediaPar = 0;
-let mediaGeral = 0;
+ let array = [5, 10, 15, 7, 2, 3];
+ let countPar = 0;
+ let countImpar = 0;
+ let verifica = 0;
+ let somaPar = 0;
+ let somaImpar = 0;
+ let mediaPar = 0;
+  let mediaGeral = 0;
 
-for (let index = 0; index < array.length; index++) {
-    verifica = array[index] % 2;
-    if (verifica == 0) {
-        somaPar =  array[index] + somaPar;
-        countPar = countPar + 1;
-    } else {
-        somaImpar = array[index] + somaImpar;
-        countImpar++;
-    }
-}
-mediaPar = somaPar / countPar;
-mediaGeral = (somaPar+somaImpar)/(countPar+countImpar);
+ for (let index = 0; index < array.length; index++) {
+     verifica = array[index] % 2;
+     if (verifica == 0) {
+         somaPar =  array[index] + somaPar;
+         countPar = countPar + 1;
+     } else {
+         somaImpar = array[index] + somaImpar;
+         countImpar++;
+     }
+ }
+  mediaPar = somaPar / countPar;
+ mediaGeral = (somaPar+somaImpar)/(countPar+countImpar);
 
-console.log(countImpar);
+ console.log(countImpar);
 
 
 
