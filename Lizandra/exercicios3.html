@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Array é uma variável com vários coisas dentro. (lista)
+Inicia da posição zero. 
+
+let array = ['banana', 'melancia'];
+console.log(array);
+
+let somaNotas = 0;
+let array = [6, 10 , 5];
+console.log(array);
+
+for (let index = 0; index < array.lenght; index++){
+    somaNotas = somaNotas + array[index[;]
+}
+
+let media = somaNotas / array.lenth;
+console.log(somaNotas);
+console.log(media); -->
+
+    <!-- MOSTRAR POR POSIÇÃO E QUAL ARRAY
+array.forEach(function (item, indice, array) {
+    console.log (item, indice);
+    }); -->
+
+    <!-- EXERCICIO 1 - array
+
+EXERCICIO 7
+07 - Faça um algoritmo que leia 6 valores positivos. 
+Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]
+<script>
+
+    let array = [5, 9, 15, 7, 2, 6]
+    let countPar = 0;
+    let countImpar = 0;
+    let verifica = 0;
+    let somaPar = 0;
+    let somaImpar = 0;
+    let mediaPar = 0;
+    let mediaGeral = 0;
+
+    for (let index = 0; index < array.length; index++) {
+        verifica = array[index] % 2;
+        if (verifica == 0) {
+        somaPar = array[index] + somaPar;
+            countPar++;
+            resposta: 2 - 8 
+        } else {
+            somaImpar = array[index] + somaImpar;
+            resultado: 5- 14 -29- 36 
+            countImpar++;
+        }
+        mediaPar = somaPar/countPar;
+        mediaGeral = (somaPar+somaImpar)/(countPar+countImpar);
+
+       
+     
+    }
+    console.log(countImpar);
+    console.log(mediaPar);
+    console.log(mediaGeral); -->
+    <script>
+
+        let baseGerente = 0;
+        let minimoMerito = 20000;
+        let SomaBaseAtual = 0;
+        let valormerito = 800;
+        let baseUnidade = [
+            132091.35,
+            107262.59,
+            24422.35,
+            28889.29,
+            148347.45,
+            64635.84,
+            30421.26,
+            15000,
+            22585.53
+        ];
+        let caixaAtual = [
+            139204.36,
+            99152.61,
+            27806.93,
+            35363.27,
+            173191.01,
+            61822.37,
+            28306.43,
+            46928.11,
+            18644.67
+        ];
+        let pastasUnidades = [
+            87,
+            24,
+            47,
+            20,
+            35,
+            15,
+            42,
+            29,
+            29
+        ];
+        let somaBaseAnterior = 0;
+        let verificaBateuMeta = 0;
+        for (let index = 0; index < pastasUnidades.length; index++) {
+            somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+
+            if (pastasUnidades[index] >= 20) {
+                SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
+              
+            if (pastasUnidades[index] < 20) {
+                if (caixaAtual[index] > baseUnidade[index]) {
+                    SomaBaseAtual = SomaBaseAtual + baseUnidade[index];
+                }
+
+                if (caixaAtual[index] < baseUnidade[index]) {
+                    SomaBaseAtual = SomaBaseAtual + caixaAtual[index];
+                }
+            }
+        }
+    
+        verificaBateuMeta = SomaBaseAtual - somaBaseAnterior;
+        if (verificaBateuMeta >= minimoMerito) {
+            verificaBateuMeta = (verificaBateuMeta / minimoMerito) * 800;
+        } else {
+            console.log("tente novamente");
+        }
+
+        console.log(somaBaseAnterior);
+        console.log(SomaBaseAtual);
+        console.log(verificaBateuMeta);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

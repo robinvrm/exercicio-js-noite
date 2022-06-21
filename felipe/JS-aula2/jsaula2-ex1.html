@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    // script para verificar o salário conforme o cargo. os cargos são os seguintes
+    // Cargos (gerente, supervisor, outros)
+    // salario base = 2000
+    // gerente ganha 10% a mais que o salario base
+    // supervisor ganha 50% a mais que o salario base
+    // qualquer outro cargo recebe salario base.
+
+    let cargo = 'Gerente';
+
+    let salariobase = 2000;
+
+    switch (cargo) {
+        case 'Gerente':
+            console.log(salariobase + salariobase * 0.10);
+            break;
+        case 'Supervisor':
+            console.log(salariobase + salariobase * 0.50);
+            break;
+        default:
+            console.log(salariobase);
+
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    // Calculadora
+    // Faça um script que receba 2 valores
+    // escolha a opção que deseja fazer - adição, subtração, multiplicação, divisão
+    // mostre os dois números escolhidos, a opção escolhida e o resultado
+
+    let valor1 = 3;
+    let valor2 = 4;
+
+    let oper = 'adicao';
+
+    let adicao = valor1 + valor2;
+    let subtracao = valor1 - valor2;
+    let multiplicacao = valor1 * valor2;
+    let divisao = valor1 / valor2;
+
+
+    switch (oper) {
+        case 'adicao':
+            console.log(valor1 + ' + ' + valor2 + ' = ' + adicao);
+            break;
+        case 'subtracao':
+            console.log(valor1 + ' - ' + valor2 + ' = ' + subtracao);
+            break;
+        case 'multiplicacao':
+            console.log(valor1 + ' x ' + valor2 + ' = ' + multiplicacao);
+            break;
+        case 'divisao':
+            console.log(valor1 + ' / ' + valor2 + ' = ' + divisao);
+            break;
+
+        default:
+            console.log(0);
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

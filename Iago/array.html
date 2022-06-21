@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array - Exercícios</title>
+</head>
+<script>
+    /* Exemplo Array - estrutura */
+
+    // let somanotas = 0;
+    // let array = [6, 10, 5];
+    // console.log('Hello World! ' + array);
+
+    // for (let index = 0; index < array.length; index++) {
+    //     somanotas = somanotas + array[index];
+    // }
+
+    // let media = somanotas / array.length;
+    // console.log(somanotas);
+    // console.log(media);
+
+    /* Exemplo Array - exercício */
+
+    // let somanotas = 0;
+    // let array = [6, 10, 5, 4, 5, 9, 0];
+    // console.log(array)
+
+    // for (let index = 0; index < array.length; index++) {
+    //     somanotas = somanotas + array[index];
+    // }
+
+    // let media = somanotas / array.length;
+
+    // array.forEach(function (item, indice, array) {
+    //     console.log(item, indice);
+    // });
+
+
+    /* -----------------------------------*/
+
+
+    /* 05 - Desenvolver um algoritmo que leia a altura(em cm) de 15 pessoas.
+     Este deverá calcular e mostrar : [array] a. A menor altura do grupo; b. A maior altura
+    do grupo;
+    
+    Exemplo metodo de ordenação:
+
+    function bubbleSort(arr) {
+        var length = arr.length;
+        for (var i = 0; i < length; i++) {
+            for (var j = 0; j < (length - i - 1); j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+    }
+    var arr = [5, 4, 3, 2, 1];
+    bubbleSort(arr);
+
+    console.log(arr);
+
+    Exemplo Bubble Sort
+
+    let bubble = [82, 76, 6, 52, 45, 38, 24, 14, 54, 85, 143, 98, 65, 512, 96, 12, 4, 79];
+    
+function bubbleSort () {
+    for (let i = 0; i < bubble.length; i++) {
+        if (bubble[i] > bubble[i +1]) {
+            let v1 = bubble[i]
+            let v2 = bubble[i +1] 
+            bubble[i] = v2
+            bubble[i +1] = v1
+        }
+    }
+}
+
+for (let j = 0; j < bubble.length ; j++) {
+    bubbleSort();
+}
+
+console.log(bubble)
+
+    */
+
+    // var numeros = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
+
+    // let bubble = [193, 150, 165, 167, 170, 172, 125, 176, 177, 200, 181, 183, 185, 187, 175];
+
+    // function bubbleSort() {
+    //     for (let i = 0; i < bubble.length; i++) {
+    //         if (bubble[i] > bubble[i + 1]) {
+    //             let v1 = bubble[i]
+    //             let v2 = bubble[i + 1]
+    //             bubble[i] = v2
+    //             bubble[i + 1] = v1
+    //         }
+    //     }
+    // }
+
+    // for (let j = 0; j < bubble.length; j++) {
+    //     bubbleSort();
+    // }
+
+    // console.log(bubble)
+
+    // var maiornumero = 0;
+    // var menornumero = 10000;
+
+    // for (var i = 0; i < numeros.length; i++) {
+
+    //     var numero = numeros[i];
+
+    //     if (numero > maiornumero) {
+    //         maiornumero = numero;
+    //     }
+
+    // }
+
+    // console.log(maiornumero);
+
+
+    // for (var i = 0; i < numeros.length; i++) {
+
+    //     var numero = numeros[i];
+
+    //     if (numero < menornumero)
+    //         menornumero = numero;
+    // }
+
+    // console.log(menornumero)
+
+
+    /* -----------------------------------*/
+
+    /* 06 - Escrever um algoritmo que leia 10 números e conte quantos deles estão nos
+    seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade
+     de vezes que aparece cada intervalo. [array]*/
+
+    let numeros = [-1, 1, 27, 52, 75, 76, 78, 99, 200, 250];
+
+    let intervalo025 = 0;
+    let intervalo2650 = 0;
+    let intervalo5175 = 0;
+    let intervalo76100 = 0;
+
+    for (index = 0; index < numeros.length; index++) {
+
+        if (numeros[index] <= 25) {
+            intervalo025++;
+
+        } else if (numeros[index] > 25 && numeros[index] <= 50) {
+            intervalo2650++;
+        } else if (numeros[index] > 50 && numeros[index] <= 75) {
+            intervalo5175++;
+        } else if (numeros[index] > 75 && numeros[index] <= 100) {
+            intervalo76100++;
+        }
+
+
+    }
+    console.log(intervalo025);
+    console.log(intervalo2650);
+    console.log(intervalo5175);
+    console.log(intervalo76100);
+
+
+    // console.log(intervalo025);
+    // condoe.log(intervalo2650);
+    // console.log(intervalo5175);
+    // console.log(intervalo76100);
+
+
+
+
+    // console.log(intervalo025)
+
+
+    /* -----------------------------------*/
+
+    /* 07 - Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números
+     pares e ímpares, a média de valores pares e a média geral dos números lidos.[array]*/
+
+    // let array = [5, 9, 15, 7, 2, 6];
+    // let countpar = 0;
+    // let countimpar = 0;
+    // let verifica = 0;
+    // let somapar = 0;
+    // let somaimpar = 0;
+    // let mediapar = 0;
+    // let mediageral = 0;
+
+    // for (let index = 0; index < array.length; index++) {
+    //     verifica = array[index] % 2;
+    //     if (verifica == 0) {
+    //         somapar = array[index] + somapar;
+    //         countpar++;
+
+    //     } else {
+    //         somaimpar = array[index] + somaimpar;
+    //         countimpar++;
+    //     }
+    // }
+
+    // mediapar = somapar / countpar;
+    // mediageral = (somapar+somaimpar) / (countpar+countimpar);
+
+    // console.log(countimpar);
+    // console.log(countpar);
+    // console.log(mediapar);
+    // console.log(mediageral);
+
+
+
+    /* -----------------------------------*/
+
+    /* 08 - escreva um script que leia 15 números positivos, econtre o maior deles e o menor
+     deles, e mostre na tela. [array]*/
+
+    // let bubble = [30, 42, 45, 71, 123, 80, 78, 7, 10, 19, 65, 47, 98, 12, 200,]
+
+    // function bubbleSort() {
+    //     for (let i = 0; i < bubble.length; i++) {
+    //         if (bubble[i] > bubble[i + 1]) {
+    //             let v1 = bubble[i]
+    //             let v2 = bubble[i + 1]
+    //             bubble[i] = v2
+    //             bubble[i + 1] = v1
+    //         }
+    //     }
+    // }
+
+    // for (let j = 0; j < bubble.length; j++) {
+    //     bubbleSort();
+    // }
+
+    // console.log(bubble)
+
+
+
+    /* -----------------------------------*/
+    
+
+</script>
+
+<body>
+    <h1>HELLO WORLD!</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    //escreva um script que leia 15 números positivos, econtre o maior deles e o menor deles, e mostre na tela. [array]
+
+    let array = [170, 160, 150, 165, 171, 180, 186, 190, 192, 189, 173, 182, 155, 177, 188];
+
+    // function bubbleSort(array) {
+    for (let j = 0; j > array.length; j++) {
+        for (let i = 0; i < array.length - j - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                var tmp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = tmp;
+            }
+        }
+    }
+
+    // return array;
+    // bubbleSort(array);
+
+    console.log(array);
+    console.log(array[0]);
+    console.log(array[array.length - 1]);
+    console.log('O menor número é ' + array[0] + ' e o maior número é ' + array[array.length - 1]);
+
+</script>
+
+<body>
+
+</body>
+
+</html>
