@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" src="javascript.js"></script> -->
+    <title>Java</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function verificarIdade(idade){
+        
+        var idade = idade;
+        var corpo = document.body;
+    
+        if (idade >=18) {
+        console.log('maior de idade -' );
+        document.write('maior de idade - ' +idade)
+        corpo.style.background ='black';
+        corpo.style.color ='white';
+        
+    }
+    else {
+        console.log('menor de idade - ' +idade);
+        document.write('menor de idade - ' +idade);
+        document.body.style.background = 'red';
+        corpo.style.color ='white';
+    }
+    }
+    
+    console.log(verificarIdade(21));
+     </script>
+</html>
+
