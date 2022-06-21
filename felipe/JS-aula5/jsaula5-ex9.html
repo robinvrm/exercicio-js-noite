@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+
+    //Desafio array
+
+    // Cada unidade tem uma receita base. Essa receita base será nosso comparativo para o caixa atual.
+    // cada unidade tem "x" pastas;
+    // precisa bater 20 pastas. [array]
+
+    // se bater 20 pastas, contabiliza tanto pra positivo, quanto pra negativo o valor do caixa.
+    // se não bater 20 pastas, valor positivo não contabiliza, apenas valor negativo contabiliza.
+
+    // a diferença entre o valor total de caixa atual com o valor total da base MAIS o valor do gerente, precisar ser maior que 20 mil
+
+    // se chegar a 20 mil positivo, recebe 800 de meritocracia.
+    // a cada 20 mil, ganha 800 reais
+    // menos de 20 mil não recebe meritocracia
+
+    // acima de 20 mil, caso não fechar outra merito(exemplo 40 mil), recebe proporcional
+
+    // mostrar o valor entre a soma do valor total da base e o valor total atual do caixa.
+    // mostrar o valor total da meritocracia à receber (caso tenha batido).
+    // mostrar o valor total do gerente, caso não tenha batido a meritocracia.
+
+    //         baseGerente = 0;
+    //     minimoMerito = 20000;
+
+    //     let baseUnidade = [
+    //         132091.35,
+    //         107262.59,
+    //         24422.35,
+    //         28889.29,
+    //         148347.45,
+    //         64635.84,
+    //         30421.26,
+    //         15000,
+    //         22585.53
+    //     ];
+    //     let caixaAtual = [
+    //         139204.36,
+    //         99152.61,
+    //         27806.93,
+    //         35363.27,
+    //         173191.01,
+    //         61822.37,
+    //         28306.43,
+    //         46928.11,
+    //         18644.67
+    //     ];
+    //     let pastasUnidades = [
+    //         87,
+    //         24,
+    //         47,
+    //         20,
+    //         35,
+    //         15,
+    //         42,
+    //         29,
+    //         29
+    //     ];
+
+    baseGerente = 0;
+    minimoMerito = 20000;
+
+    let baseUnidade = [
+        132091.35,
+        107262.59,
+        24422.35,
+        28889.29,
+        148347.45,
+        64635.84,
+        30421.26,
+        15000,
+        22585.53
+    ];
+    let caixaAtual = [
+        139204.36,
+        99152.61,
+        27806.93,
+        35363.27,
+        173191.01,
+        61822.37,
+        28306.43,
+        46928.11,
+        18644.67
+    ];
+    let pastasUnidades = [
+        87,
+        24,
+        47,
+        20,
+        35,
+        15,
+        42,
+        29,
+        29
+    ];
+
+    // let merito = caixaAtual - baseUnidade;
+    let somaBaseAtual = 0;
+    let somaBaseAnterior = 0;
+    // let merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+    let merito = 0;
+    let valorMerito = 800;
+    let meritoGanho = 0;
+
+    // for (let index = 0; index < merito.length; index++) {
+    //    if (pastasUnidade[index] >= 20) {
+    //        if (merito >= minimoMerito) {
+
+    //        }
+    //    }
+    // }
+
+    for (let index = 0; index < pastasUnidades.length; index++) {
+        somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+        if (pastasUnidades[index] >= 20) {
+            somaBaseAtual = somaBaseAtual + caixaAtual[index];
+        }
+        if (pastasUnidades[index] < 20) {
+            if (caixaAtual[index] > baseUnidade[index]) {
+                somaBaseAtual = somaBaseAtual + baseUnidade[index]
+            }
+            if (caixaAtual[index] < baseUnidade[index]) {
+                somaBaseAtual = somaBaseAtual + caixaAtual[index]
+            }
+        }
+        // if (merito >= minimoMerito) {
+        //     merito = somaBaseAtual - somaBaseAnterior + baseGerente
+        //     meritoGanho = (merito / minimoMerito) * valorMerito;
+
+        // }
+    }
+    console.log(somaBaseAnterior);
+    console.log(somaBaseAtual);
+
+    merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+    console.log(merito);
+
+    if (merito >= minimoMerito) {
+        meritoGanho = (merito / minimoMerito) * valorMerito;
+        console.log(meritoGanho);
+    } else {
+        console.log('TENTE OUTRA VEZ');
+    }
+
+</script>
+<!-- 2.270,56 -->
+
+<body>
+
+</body>
+
+</html>
