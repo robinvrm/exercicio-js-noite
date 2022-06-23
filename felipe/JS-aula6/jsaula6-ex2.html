@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+    // OBJETO na meritocracia
+
+    var unidades = [
+        { baseUnidade: 132091.35, caixaAtual: 139204.36, pastasUnidades: 87 },
+        { baseUnidade: 107262.59, caixaAtual: 99152.61, pastasUnidades: 24 },
+        { baseUnidade: 24422.35, caixaAtual: 27806.93, pastasUnidades: 47 },
+        { baseUnidade: 28889.29, caixaAtual: 35363.27, pastasUnidades: 20 },
+        { baseUnidade: 148347.45, caixaAtual: 173191.01, pastasUnidades: 35 },
+        { baseUnidade: 64635.84, caixaAtual: 61822.37, pastasUnidades: 15 },
+        { baseUnidade: 30421.26, caixaAtual: 28306.43, pastasUnidades: 42 },
+        { baseUnidade: 15000, caixaAtual: 46928.11, pastasUnidades: 29 },
+        { baseUnidade: 22585.53, caixaAtual: 18644.67, pastasUnidades: 29 }
+    ]
+
+    baseGerente = 0;
+    minimoMerito = 20000;
+
+    // let merito = caixaAtual - baseUnidade;
+    let somaBaseAtual = 0;
+    let somaBaseAnterior = 0;
+    // let merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+    let merito = 0;
+    let valorMerito = 800;
+    let meritoGanho = 0;
+
+    for (let index = 0; index < unidades.length; index++) {
+        somaBaseAnterior = somaBaseAnterior + unidades[index].baseUnidade;
+        if (unidades[index].pastasUnidades >= 20) {
+            somaBaseAtual = somaBaseAtual + unidades[index].caixaAtual;
+        }
+        if (unidades[index].pastasUnidades < 20) {
+            if (unidades[index].caixaAtual > unidades[index].baseUnidade) {
+                somaBaseAtual = somaBaseAtual + unidades[index].baseUnidade
+            }
+            if (unidades[index].caixaAtual < unidades[index].baseUnidade) {
+                somaBaseAtual = somaBaseAtual + unidades[index].caixaAtual
+            }
+        }
+    }
+    console.log(somaBaseAnterior);
+    console.log(somaBaseAtual);
+
+    merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+    console.log(merito);
+
+    if (merito >= minimoMerito) {
+        meritoGanho = (merito / minimoMerito) * valorMerito;
+        console.log(meritoGanho);
+    } else {
+        console.log('TENTE OUTRA VEZ');
+    }
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

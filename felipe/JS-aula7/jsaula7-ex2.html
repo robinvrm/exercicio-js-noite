@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+
+
+<body>
+
+    <h1>Idade</h1>
+    <p>É X idade</p>
+
+</body>
+<script>
+
+    // var n1 = 19;
+
+    function idade(n1) {
+        var n1 = n1;
+        var corpo = document.body;
+
+        if (n1 >= 18) {
+            corpo.style.background = 'black';
+            corpo.style.color = 'silver';
+            console.log('É maior de idade - ' + n1);
+            document.write('É maior de idade - ' + n1);
+        }
+        else {
+            corpo.style.background = 'red';
+            corpo.style.color = 'white';
+            console.log('É menor de idade - ' + n1);
+            document.write('É menor de idade - ' + n1);
+        }
+    }
+
+    console.log(idade(19));
+
+// Idade(19);
+
+//     var maior = 'É maior de idade';
+//     var menor = 'É menor de idade';
+
+//     // var verificaIdade = document.getElementsByTagName(h1).innerText
+
+    // var corpo = document.body;
+
+    // corpo.style.background = 'black';
+    // corpo.style.color = 'silver';
+
+    // corpo.style.background = 'red';
+    // corpo.style.color = 'whiter';
+
+</script>
+</html>
