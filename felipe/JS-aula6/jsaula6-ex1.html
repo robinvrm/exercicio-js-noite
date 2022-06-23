@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- antes do title : <script type="textjavacript" src="javascriptFuncoes.js"></script> -->
+
+<script>
+    // OBJETO
+
+
+    var animais = [
+        { tipo: 'leao', cor: 'laranja', pelagem: 'sim', porte: 'grande', habitat: 'terra' },
+        { tipo: 'aguia', cor: 'branca', pelagem: 'sim', porte: 'medio', habitat: 'ar' },
+        { tipo: 'tubarao', cor: 'cinza', pelagem: 'nao', porte: 'grande', habitat: 'agua' },
+        { tipo: 'cobra', cor: 'verde', pelagem: 'nao', porte: 'pequeno', habitat: 'terra' },
+        { tipo: 'girafa', cor: 'amarelo', pelagem: 'sim', porte: 'grande', habitat: 'terra' },
+    ]
+
+    var animal = {
+        tipo: 'ZEBRA', cor: 'BRANCO E PRETO', pelagem: 'SIM', porte: 'GRANDE', habitat: 'TERRA'
+    }
+
+    console.log(animais);
+    console.log(animal);
+
+    console.log(animal.tipo);
+
+    console.log(animais[2].tipo);
+
+    for (let index = 0; index < animais.length; index++) {
+        console.log(animais[index]);
+        if (animais[index].cor == 'cinza') {
+            console.log(index);
+            console.log(animais[index].habitat);
+        }
+
+    }
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
