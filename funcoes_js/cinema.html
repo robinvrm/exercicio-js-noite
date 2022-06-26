@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+</head>
+<style>
+    li {
+        border: solid blue 3px;
+        height: 20px;
+        width: 80px;
+
+    }
+
+    .vermelho:hover {
+        background-color: red;
+    }
+
+    .rosa:hover {
+        background-color: pink;
+    }
+
+    .amarelo:hover {
+        background-color: yellow;
+    }
+
+    .laranjado:hover {
+        background-color: orange;
+    }
+
+    .roxo:hover {
+        background-color: purple;
+    }
+
+    .preto:hover {
+        background-color: gray;
+    }
+
+    input {
+
+        border: solid blue 3px;
+
+    }
+
+    button {
+        border: solid blue 3px;
+    }
+
+    .box {
+
+        border: solid blue 3px;
+        background-color: rgb(0, 217, 255);
+        width: 500px;
+        border-radius: 10px;
+        margin: 20px 20px 20px 20px;
+
+    }
+
+    h1 {
+        margin: 20px 20px 20px 20px;
+        color: blue;
+    }
+
+    p {
+        margin: 20px 20px 20px 20px;
+    }
+
+    h2 {
+        margin: 20px 20px 20px 20px;
+        color: blue;
+    }
+
+    ul {
+        margin: 20px 20px 20px 20px;
+    }
+
+    input {
+        margin: 20px 20px 20px 20px;
+    }
+
+    #filme {
+        margin: 20px 20px 20px 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+
+
+
+        <!-- /* Exercício 05 - Desafio
+
+Lista de filmes:
+
+Escreva um script que, de acordo com a opção escolhida, mostrará as opções para o usuário.
+Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme.
+Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no
+console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro
+do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que
+a idade > do usuário pode assistir. */ !-->
+
+        <h1>Cinema</h1>
+
+        <p>Verifique a melhor opção pra você! <br></p>
+
+        <h2>Generos</h2>
+        <ul type="circle">
+            <li class="vermelho">Ação</li>
+            <li class="rosa">Romance</li>
+            <li class="amarelo">Comédia</li>
+            <li class="laranjado">Animação</li>
+            <li class="roxo">Suspense</li>
+            <li class="preto">Terror</li>
+        </ul>
+
+        <p>A seguir preencha sua idade, e depois, genero de preferência. <br>
+            Atenção, escreva idêntico as opções de genero descritas acima.</p>
+
+        <input type="number" id="idade" placeholder="idade">
+        <input type="text" id="genero">
+        <button onclick="calcular()">verificar</button>
+
+        <div id="filme"></div>
+
+        <script>
+
+            function calcular() {
+                let idade = document.getElementById('idade').value;
+                let genero = document.getElementById('genero').value;
+                alert(genero)
+
+                switch (genero) {
+                    case "Ação":
+                        if (idade >= 14) {
+
+                            document.getElementById('filme').innerText = "<strong><i>Bom filme!</i></strong>"
+
+                        } else {
+                            document.getElementById('filme').innerHTML = "<strong><i>Esse título não é para menor de 14 anos. Recomendamos verificar as categorias a seguir: animação (livre), comedia (8 anos) ou romance (10 anos).</i></strong>";
+                            document.getElementById('filme').style.color = "red";
+                            break;
+                        }
+
+                    case "Romance":
+                        if (idade >= 10) {
+                            document.getElementById('filme').innerHTML = "<strong><i>Bom filme!</i></strong>"
+
+                        } else {
+                            document.getElementById('filme').innerHTML = "<strong><i>Esse título não é para menor de 10 anos. Recomendamos verificar as categorias a seguir: comédia (8 anos) ou animação (livre).</i></strong>";
+                            document.getElementById('filme').style.color = "pink";
+                            break;
+                        }
+                    case "Comédia":
+                        if (idade >= 8) {
+                            document.getElementById('filme').innerHTML = "Bom filme!"
+                        } else {
+                            document.getElementById('filme').innerHTML = "<strong><i>Esse título não é para menor de 8 anos. Recomendamos assistir animação (livre).</i></strong>";
+                            document.getElementById('filme').style.color = "yellow";
+                            break;
+                        }
+                    case "Animação":
+                        if (idade >= 0) {
+                            document.getElementById('filme').innerHTML = "<strong><i>Bom filme!</i></strong>"
+                            document.getElementById('filme').style.color = "blue";
+                            break;
+                        }
+                    case "Suspense":
+                        if (idade >= 16) {
+                            document.getElementById('filme').innerHTML = "<strong>Bom filme!</strong>"
+                            document.getElementById('filme').style.color = "blue";
+                            break;
+                        } else {
+                            document.getElementById('filme').innerHTML = "<strong><i>Esse título não é para menor de 16 anos. Recomendamos verificar as categorias a seguir: animação (livre), comédia (8 anos), romance (10 anos) ou ação (14 anos).</i></strong>";
+                            document.getElementById('filme').style.color = "purple";
+                            break;
+                        }
+                    case "Terror":
+                        if (idade >= 18) {
+                            document.getElementById('filme').innerHTML = "<strong><i>Bom filme!</i></strong>"
+                            document.getElementById('filme').style.color = "blue";
+                        } else {
+                            document.getElementById('filme').innerHTML = "<strong><i>Esse título não é para menor de 18 anos. Recomendamos verificar as categorias a seguir: animação (livre), comédia (8  anos), romance (10 anos), ação (14 anos) ou suspense (16 anos).</i></strong>";
+                            document.getElementById('filme').style.color = "grey";
+                            break;
+                        }
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
