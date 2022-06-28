@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id='nome' type="text">
+    <input id='idade' type="text">
+    <button id="cadastrar">Cadastrar</button>
+    <button id="pesquisar">Mostrar Cadastro</button>
+    
+</body>
+
+<script>
+    //  document.getElementById('cadastrar').addEventListener('click', cadastrar)
+
+     var array = [];
+
+    document.getElementById("cadastrar").addEventListener("click", function () {
+        let nomeCompleto = document.getElementById("nome").value;
+        // console.log(nomeCompleto)
+
+        let idade = document.getElementById("idade").value
+        // console.log(idade)
+
+        let objetoCadastro = {};
+
+        objetoCadastro.nome = nomeCompleto;
+        objetoCadastro.idade = idade;
+        
+        array.push(objetoCadastro);
+        console.log(array);
+        
+    })
+
+    document.getElementById("pesquisar").addEventListener("click", function () {
+
+        for (let index = 0; index < array.length; index++) {
+            
+            if ( array[index].nome == "Matheus") {
+                console.log(array[index]);
+                
+            }
+        }
+    })
+
+    
+
+    //  let nome = input('nome').value
+    //  let nome = input('idade').value
+
+    //   let objetoCadastro = {};
+
+    // objetoCadastro.nome = nome;
+    // objetoCadastro.idade = idade;
+
+        // array.push('nome', 'idade')
+        // console.log(array.length)
+
+
+</script>
+
+</html>
