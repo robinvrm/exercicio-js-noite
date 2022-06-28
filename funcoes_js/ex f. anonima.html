@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Cadastrar - Mostrar Cadastros</title>
+</head>
+
+<body>
+    <input id="nome" type="text">
+    <input id="idade" type="text">
+    <input id="buscar" type="text" placeholder="buscar">
+    <button id="cadastrar">Cadastrar</button>
+    <button id="mostrar">Mostrar Cadastros</button>
+
+</body>
+<script>
+
+    var array = [];
+
+    document.getElementById("cadastrar").addEventListener("click", function () {
+        let nome = document.getElementById("nome").value;
+        let idade = document.getElementById("idade").value;
+
+        var objetoCadastro = {};
+
+        objetoCadastro.nome = nome;
+        objetoCadastro.idade = idade;
+
+        array.push(objetoCadastro);
+
+        console.log(array)
+
+    })
+
+    document.getElementById("mostrar").addEventListener("click", function () {
+        let nomeBusca = document.getElementById("buscar").value;
+        for (index = 0; index < array.length; index++) {
+            if (array[index].nome == nomeBusca) {
+                console.log(array[index]);
+            }
+
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
