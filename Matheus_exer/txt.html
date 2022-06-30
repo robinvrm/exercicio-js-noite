@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="numero" type="text">
+    <button id="adicionar">Adicionar numero</button>
+</body>
+
+<script>
+
+    var array = []
+
+    document.getElementById("adicionar").addEventListener("click", function () {
+        let adicionarnumero = document.getElementById("numero").value;
+        array.push(adicionarnumero)
+         array.sort(buscar)
+        console.log(array);
+
+    })
+
+     function buscar(a,b) {
+         return a-b
+      
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
