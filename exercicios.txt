@@ -1,0 +1,32 @@
+criar um input, para incluir números a um array, e fazer a ordenação dinamicamente a cada nova inserção de um número..
+mostrar na tela os números ordenados (toda vez que adicionar um novo número)
+-------------------------------------------------------------------------------------------------
+
+calculadora IMC com a tela
+-------------------------------------------------------------------------------------------------
+
+conversor de temperatura (o usuario pode escolher dee celsius para fahrenheit, ou vice-versa)
+--------------------------------------------------------------------------------------------------
+carrinho de compras
+criar objeto(entradas - descrição do produto, valor) - após adicionar os produtos, no botão FINALIZAR COMPRAR, mostrar na tela os produtos e a soma total da compra
+--------------------------------------------------------------------------------------------------
+
+DESAFIO -----
+------------------------------------------------------------------------------------------------------------------------------
+médias por matéria - criar 4 inputs
+primeiro input nome do aluno
+segundo input nome da matéria
+terceiro input nota
+
+quarto input pesquisa do nome do aluno 
+
+criar um array de objetos, a cada clique em adicionar, montar um objeto, dentro do array..
+
+terá 2 botões
+botão adicionar
+botão buscar aluno
+
+o botão adiconar, irá adicionar o objeto ao array
+o botão pesquisar, irá pesquisar se existe o aluno nesse array, se existir, mostrar a média de cada matéria desse aluno na tela..
+se não existir, mostrar que o aluno não existe.
+---------------------------------------------------------------------------------------------------------------------------------
