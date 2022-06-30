@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+
+<body>
+
+    <input id="numero" type="text">
+    <button id="cadastrar">Cadastrar</button>
+    <button id="mostrar">Mostrar</button>
+
+    <div id="tela">tela
+    </div>
+
+</body>
+<script>
+
+    var array = [];
+
+
+    document.getElementById("cadastrar").addEventListener("click", function () {
+
+        let numero = document.getElementById("numero").value;
+
+        array.push(numero);
+
+        array.sort(ordenar)
+
+        console.log(array)
+        document.getElementById('tela').innerHTML = array;
+
+    })
+
+    function ordenar(a, b) {
+        return a - b;
+    }
+
+    //* -------------------------------------------------*//
+
+
+
+
+
+
+
+</script>
+
+</html>
