@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="peso" type="number">
+    <input id="altura" type="number">
+   <button id=" Verificar">Verificar </button>
+   <div id = "verifica"></div>
+   
+</body>
+</html>
+
+<script>
+
+ let imc = peso / (altura * altura);
+ console.log(imc);
+ if (imc < 18.5) {
+     console.log("abaixo do peso normal")
+
+ } else if (imc > 18.5 && imc < 25) {
+    console.log("peso normal")
+}
+else if (imc >= 25 && imc < 30) {
+    console.log("sobrepeso")
+}
+else if (imc >= 30 && imc < 35) {
+    console.log("Obesidade")
+}
+else if (imc >= 35 && imc < 40) {
+    console.log("Obesidade 2")
+}
+else if (imc >= 40) {
+    console.log("Obesidade 3")
+}
+
+
+
+</script>
