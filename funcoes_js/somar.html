@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="somar.js"></script>
     <title>SOMAR</title>
+<script>
+let num1= document.getElementById('num1').value;
+let num1= document.getElementById('num2').value;
+let result;
 
+switch (opc) {
+    case 'somar':
+        result = somar (num1, num2);
+         break;
+
+
+         default:
+            break;
+}
+
+    document.getElementById('res').innerHTML = O resultado é: " + result; 
+</script>
 </head>
 <body>
-    
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="calcular('somar')">somar</button>
+    <div style="display": none" id="_voltar">
+    </div>
+
+    <h1 id="res">  O resultado da operação irá aparecer aqui</h1>
 </body>
 </html>
