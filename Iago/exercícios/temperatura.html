@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor temperatura</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid blue;
+    }
+
+    .temperaturacel {
+        border: solid blue 3px;
+        background-color: rgb(0, 217, 255);
+        width: 240px;
+        border-radius: 10px;
+        margin: 20px 20px 20px 0px;
+        border: 1px solid blue;
+
+    }
+
+    .temperaturafah {
+        border: solid blue 3px;
+        background-color: rgb(0, 217, 255);
+        width: 240px;
+        border-radius: 10px;
+        margin: 20px 20px 20px 0px;
+        border: 1px solid blue;
+
+    }
+</style>
+
+<body>
+    <!-- conversor de temperatura (o usuario pode escolher dee celsius para fahrenheit, ou vice-versa) -->
+
+    <div class="container">
+        <h1>CONVERSOR DE TEMPERATURA</h1>
+        <p>Para converter a temperatura de fahrenheit para celsius, <br>
+            e de celsius para fahrenheit utiliza os cálculos da tabela a seguir:
+
+        </p>
+        <h2>TABELA</h2>
+        <table>
+            <tr>
+                <th>TIPO DE CONVERSÃO</th>
+                <th>DESCRIÇÃO</th>
+            </tr>
+            <tr>
+                <td>De farenheit para celsius</td>
+                <td>5*(fahrenheit - 32) / 9</td>
+            </tr>
+            <tr>
+                <td>De celsius para farenheit</td>
+                <td>fahrenheit = (9*celsius/5) + 32</td>
+            </tr>
+
+        </table>
+
+        <h3>Converta farenheit para celcius</h3>
+
+        <!-- Option for providing height 
+            and weight to the user-->
+        <div class="temperaturafah">
+            <p>Insira temperatura em farenheit</p>
+
+            <input type="text" id="fahrenheit">
+
+            <br>
+            <br>
+
+            <button id="converterfah">Converter</button>
+
+            <br>
+            <br>
+            <div id="resultadocel"></div>
+        </div>
+
+        <h3>Converta celsius para farenheit</h3>
+
+        <div class="temperaturacel">
+            <p>Insira temperatura em celcius</p>
+
+            <input type="text" id="celsius">
+
+            <br>
+            <br>
+
+            <button id="convertercel">Converter</button>
+
+            <br>
+            <br>
+            <div id="resultadofah"></div>
+        </div>
+
+
+
+</body>
+
+<script>
+
+    /*Observação importante -> Depois de concluir o exercício, tentei melhorar o código
+    colocando os dois botões dentro da mesma função e também o cálculo, funciona, o cálculo
+    mas executa as duas funções no mesmo clic, e apenas para um botão. Para dois botões, 
+    necessário duas funções "clic"*/
+
+    document.getElementById("converterfah").addEventListener("click", function () {
+        var button = document.getElementById('converterfah');
+
+        let fahrenheit = document.getElementById('fahrenheit').value;
+
+
+        var resultcel = 5 * (fahrenheit - 32) / 9;
+        alert(resultcel);
+        document.getElementById('resultadocel').innerHTML = "Temperatura em graus celsius: " + resultcel;
+
+
+    });
+
+
+    document.getElementById("convertercel").addEventListener("click", function () {
+        let button = document.getElementById('convertercel')
+        let celsius = document.getElementById('celsius').value;
+
+        var resultfah = (9 * celsius / 5) + 32;
+        alert(resultfah)
+
+
+        document.getElementById('resultadofah').innerHTML = "Temperatura em graus farenheit: " + resultfah;
+
+
+    });
+
+    //*--------------------*//
+
+    //*-------------------- celsius para fahrenheit---------------------*//
+
+    // var celsius = parseFloat(prompt("Temperatura em  graus Celsius: "));
+
+    // var fahrenheit = (9 * celsius / 5) + 32;
+
+    // document.write("Temperatura em graus Fahrenheit = ", fahrenheit);
+
+    //*-------------------fahrenheit para celsius----------------------*//
+
+    // var fahrenheit = parseFloat(prompt("Temperatura em graus Fahrenheit: "));
+
+    // var celsius = 5 * (fahrenheit - 32) / 9;
+
+    // document.write("Temperatura em graus Celsius = ", celsius);
+
+    //*-----------------------------------------*//
+
+</script>
+
+</html>
