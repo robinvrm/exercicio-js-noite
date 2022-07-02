@@ -7,9 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
 </head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid blue;
+    }
+
+    .calculadora {
+        border: solid blue 3px;
+        background-color: rgb(0, 217, 255);
+        width: 200px;
+        border-radius: 10px;
+        margin: 20px 20px 20px 0px;
+        border: 1px solid blue;
+
+    }
+</style>
 
 <body>
-
     <!-- Exerecício 03 - IMC
 
     fazer o cálculo do IMC 02 - Calcular IMC -->
@@ -39,45 +55,170 @@
     //     console.log("obesidade classe 3")
     // } -->
 
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <button onclick="calcular('subtrair')">Subtrair</button>
+    <!-- <div class="container">
+        <h1>Calculo IMC</h1>
+
+        <p>altura (em centimetros)</p>
+
+        <input type="text" id="altura">
+
+        <p>Peso (em kg)</p>
+
+        <input type="text" id="peso">
+
+        <button onclick="calcular('calcular')">calcular</button>
+
+        <div id="resultado"></div>
+    </div> -->
+
+
+
+    <div class="container">
+        <h1>CALCULADORA IMC</h1>
+        <p>Conforme a OMC (Organização Mundial de Saúde), através de estudos
+            realizados nas últimas 5 décadas, a tabela a ser seguida global,
+            referente ao IMC (Índice de Massa Corporal), segue tabela a seguir:
+
+        </p>
+        <h2>TABELA</h2>
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>DESCRIÇÃO</th>
+            </tr>
+            <tr>
+                <td>menor que 18.5</td>
+                <td>abaixo do normal</td>
+            </tr>
+        </table>
+
+        <h3>Verifique seu IMC na cálculadora abaixo</h3>
+
+        <!-- Option for providing height 
+            and weight to the user-->
+        <div class="calculadora">
+            <p>Altura (em centimetros)</p>
+
+            <input type="text" id="altura">
+
+            <p>Peso (em kilos)</p>
+
+            <input type="text" id="peso">
+
+            <button id="calcular">Calcular</button>
+
+            <br>
+            <br>
+        </div>
+
+        <div id="resultado">resultado</div>
     </div>
-
-    <div>
-        <h1 id="res"> O resultado da operação irá aparecer aqui</h1>
-    </div>
-
-
-
 </body>
 
 <script>
-    function subtrair(num1, num2) {
-        return num1 - num2;
 
 
-    }
+    // window.onload = () => {
+    //     let button = document.querySelector("#btn");
 
-    let n1 = 20;
-    let n2 = 5;
+    //     // Function for calculating BMI
+    //     button.addEventListener("click", calculateBMI);
+    // };
 
-    var retornofuncao = subtrair(n1, n2)
-    console.log(retornofuncao);
+    // function calculateBMI() {
 
-    function calcular(opc) {
+    //     /* Getting input from user into height variable.
+    //     Input is string so typecasting is necessary. */
+    //     let height = parseInt(document
+    //         .querySelector("#height").value);
 
-        let num1 = document.getElementById('num1').value;
-        let num2 = document.getElementById('num2').value;
-        let result;
+    //     /* Getting input from user into weight variable. 
+    //     Input is string so typecasting is necessary.*/
+    //     let weight = parseInt(document
+    //         .querySelector("#weight").value);
 
-        switch (opc) {
-            case 'subtrair':
-                result = subtrair(num1, num2)
-                break;
+    //     let result = document.querySelector("#result");
+
+    //     // Checking the user providing a proper
+    //     // value or not
+    //     if (height === "" || isNaN(height))
+    //         result.innerHTML = "Provide a valid Height!";
+
+    //     else if (weight === "" || isNaN(weight))
+    //         result.innerHTML = "Provide a valid Weight!";
+
+    //     // If both input is valid, calculate the bmi
+    //     else {
+
+    //         // Fixing upto 2 decimal places
+    //         let bmi = (weight / ((height * height)
+    //             / 10000)).toFixed(2);
+
+    //         // Dividing as per the bmi conditions
+    //         if (bmi < 18.6) result.innerHTML =
+    //             `Under Weight : <span>${bmi}</span>`;
+
+    //         else if (bmi >= 18.6 && bmi < 24.9)
+    //             result.innerHTML =
+    //                 `Normal : <span>${bmi}</span>`;
+
+    //         else result.innerHTML =
+    //             `Over Weight : <span>${bmi}</span>`;
+    //     }
+    // }
+
+    document.getElementById("calcular").addEventListener("click", function () {
+        let button = document.getElementById('calcular')
+
+        let altura = document.getElementById('altura').value;
+        let peso = document.getElementById('peso').value;
+        var result = ((peso) / (altura * altura) * 10000);
+        alert(result)
+
+        if (result < 18.5) {
+            document.getElementById('resultado').innerHTML = "abaixo do peso normal, resultado imc: " + result;
+
         }
-        document.getElementById('res').innerHTML = "O resultado é: " + result;
-    }
+
+        if (result >= 18.5 && result <= 24.9) {
+            document.getElementById('resultado').innerHTML = "peso normal, resultado imc:  " + result;
+
+        }
+
+
+        if (result >= 25 && result <= 29.9) {
+            document.getElementById('resultado').innerHTML = "acima do normal, resultado imc:  " + result;
+
+        }
+
+
+        if (result >= 30 && result <= 34.9) {
+            document.getElementById('resultado').innerHTML = "obesidade classe 1, resultado imc:  " + result;
+
+        }
+
+
+        if (result >= 35 && result <= 39.9) {
+            document.getElementById('resultado').innerHTML = "obesidade classe 2, resultado imc:  " + result;
+
+        }
+
+
+        if (result >= 40) {
+            document.getElementById('resultado').innerHTML = "obesidade classe 3, resultado imc:  " + result;
+
+        }
+
+
+    });
+
+
+
+
+
+
+
+
 </script>
 
 </html>
