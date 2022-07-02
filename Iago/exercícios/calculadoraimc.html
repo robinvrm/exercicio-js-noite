@@ -17,7 +17,7 @@
     .calculadora {
         border: solid blue 3px;
         background-color: rgb(0, 217, 255);
-        width: 200px;
+        width: 240px;
         border-radius: 10px;
         margin: 20px 20px 20px 0px;
         border: 1px solid blue;
@@ -87,12 +87,32 @@
                 <th>DESCRIÇÃO</th>
             </tr>
             <tr>
-                <td>menor que 18.5</td>
+                <td>Menor que 18.5</td>
                 <td>abaixo do normal</td>
+            </tr>
+            <tr>
+                <td>De 18.5 até 24.9</td>
+                <td>Normal</td>
+            </tr>
+            <tr>
+                <td>De 25 até29.9</td>
+                <td>Acima do normal</td>
+            </tr>
+            <tr>
+                <td>De 30 a 34.9</td>
+                <td>Obesidade classe 1</td>
+            </tr>
+            <tr>
+                <td>De 35 a 39.9</td>
+                <td>Obesidade classe 2</td>
+            </tr>
+            <tr>
+                <td>Acima de 40</td>
+                <td>Obesidade classe 3</td>
             </tr>
         </table>
 
-        <h3>Verifique seu IMC na cálculadora abaixo</h3>
+        <h3>Verifique seu IMC</h3>
 
         <!-- Option for providing height 
             and weight to the user-->
@@ -105,13 +125,17 @@
 
             <input type="text" id="peso">
 
+            <br>
+            <br>
+
             <button id="calcular">Calcular</button>
 
             <br>
             <br>
+            <div id="resultado"></div>
         </div>
 
-        <div id="resultado">resultado</div>
+
     </div>
 </body>
 
