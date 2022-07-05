@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+</head>
+
+<body>
+
+    <h1>Carrinho de compras</h1>
+
+    <h2>Produtos esportivos</h2>
+
+    <ul>
+        <li>Bola Nike<r1> 99.00</r1>
+        </li>
+        <li>Calcao Adidas <r1>49.90</r1>
+        </li>
+        <li>Camisa Barcelona <r1>80.00</r1>
+        </li>
+        <li>Meiao Real Madrid <r1>35.00</r1>
+        </li>
+        <li>Tornozelera Puma <r1>29.00</r1>
+        </li>
+
+    </ul>
+
+    <div>
+        <input type="text" id="produto">
+        <input type="text" id="preco">
+        <button id="adicionar">Adicionar ao carrinho</button>
+
+    </div>
+    <br>
+    <br>
+    <div>
+        <button id="total">Finalizar compra</button>
+    </div>
+    <br>
+    <br>
+    <div id="adicionados">Os produtos irão aparecer aqui</div>
+    <br>
+    <div id="totalpreco">O preço total irá aparecer aqui</div>
+
+</body>
+
+<script>
+
+    var carrinho = []
+    // let bolanike = 99.99;
+    // let calcaoadidas = 49.90;
+    // let camisabarcelona = 80.00;
+    // let meiaorealmadrid = 35.00;
+    // let tornozelerapuma = 29.00;
+    let baseanterior = 0;
+
+
+
+    document.getElementById("adicionar").addEventListener("click", function () {
+        let produto = document.getElementById("produto").value;
+        let preco = document.getElementById("preco").value;
+
+        // if (produto = bolanike) {
+        //     produto = 99.99;
+        // }
+        // if (produto = calcaoadidas) {
+        //     produto = 49.90;
+        // }
+        // if (produto = camisabarcelona) {
+        //     produto = 80.00;
+        // }
+        // if (produto = meiaorealmadrid) {
+        //     produto = 35.00;
+        // }
+        // if (produto = tornozelerapuma) {
+        //     produto = 29.00;
+        // }
+
+        var objetoCadastro = {};
+
+        objetoCadastro.produto = produto;
+        objetoCadastro.preco = preco;
+
+
+        carrinho.push(objetoCadastro);
+
+        console.log(carrinho)
+
+
+
+    })
+
+    document.getElementById("total").addEventListener("click", function () {
+
+        for (index = 0; index < carrinho.length; index++) {
+            totalpreco = carrinho[index].preco++;
+            console.log(totalpreco);
+        }
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>
