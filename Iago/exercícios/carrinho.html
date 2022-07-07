@@ -50,64 +50,51 @@
 <script>
 
     var carrinho = []
-    // let bolanike = 99.99;
-    // let calcaoadidas = 49.90;
-    // let camisabarcelona = 80.00;
-    // let meiaorealmadrid = 35.00;
-    // let tornozelerapuma = 29.00;
-    let baseanterior = 0;
-
 
 
     document.getElementById("adicionar").addEventListener("click", function () {
         let produto = document.getElementById("produto").value;
         let preco = document.getElementById("preco").value;
-
-        // if (produto = bolanike) {
-        //     produto = 99.99;
-        // }
-        // if (produto = calcaoadidas) {
-        //     produto = 49.90;
-        // }
-        // if (produto = camisabarcelona) {
-        //     produto = 80.00;
-        // }
-        // if (produto = meiaorealmadrid) {
-        //     produto = 35.00;
-        // }
-        // if (produto = tornozelerapuma) {
-        //     produto = 29.00;
-        // }
+        let number = Number(preco);
 
         var objetoCadastro = {};
 
         objetoCadastro.produto = produto;
-        objetoCadastro.preco = preco;
-
+        objetoCadastro.preco = number;
 
         carrinho.push(objetoCadastro);
 
         console.log(carrinho)
 
-
-
     })
 
+    let totalpreco = 0;
+
+    console.log(carrinho);
     document.getElementById("total").addEventListener("click", function () {
 
         for (index = 0; index < carrinho.length; index++) {
-            totalpreco = carrinho[index].preco++;
-            console.log(totalpreco);
+
+            selecionados = (carrinho[index].produto);
+
+            totalprecoTeste = (carrinho[index].preco);
+
+            totalpreco = ((totalpreco) + (totalprecoTeste));
+
         }
 
+        console.log(totalpreco);
 
+        document.getElementById('adicionados').innerHTML = "Produtos selecionados: " + selecionados;
 
-
-
+        document.getElementById('totalpreco').innerHTML = "Valor total produtos: " + totalpreco;
 
 
 
     })
+
+
+
 
 
 
