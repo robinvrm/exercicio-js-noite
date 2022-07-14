@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- conversor de temperatura (o usuario pode escolher dee celsius para fahrenheit, ou vice-versa) -->
+
+
+    <input id="temp" type="number" placeholder="Temperatura">
+    <input type="radio" name="temperatura" id="celsius" value="celsius" checked><label>Celsius</label>
+    <input type="radio" name="temperatura" id="fahrenheit" value="fahrenheit"><label>Fahrenheit</label>
+    <button id="converter">Converter</button>
+    <div id="resultado"></div>
+
+
+    <script>
+        document.getElementById("converter").addEventListener("click", function () {
+            let temperaturaConv = document.getElementById("temp").value;
+            let opcoes = document.getElementsByName("temperatura");
+
+            for (let i = 0; i < opcoes.length; i++) {
+                if (opcoes[i].checked && opcoes[i].value == "celsius") {
+                    let fahrenheit = (9 * temperaturaConv / 5) + 32;
+
+                    document.getElementById("resultado").innerHTML = `A temperatura em graus Fahrenheit é ${fahrenheit}`;
+                }
+                else if (opcoes[i].checked && opcoes[i].value == "fahrenheit") {
+                    let celsius = 5 * (temperaturaConv - 32) / 9;
+
+                    document.getElementById("resultado").innerHTML = `A temperatura em graus Celsius é ${celsius}`;
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- criar um input, para incluir números a um array, e fazer a ordenação dinamicamente a cada nova inserção de um número..
+    mostrar na tela os números ordenados (toda vez que adicionar um novo número) -->
+
+    <input id="numero" type="number" placeholder="Insira um número">
+    <button id="incluir">Incluir</button>
+    <div id="resultado"></div>
+
+    <script>
+        var array = [];
+        document.getElementById("incluir").addEventListener("click", function () {
+            let numero = document.getElementById("numero").value;
+            array.push(numero);
+            array.sort(sortfunction);
+            console.log(array)
+            document.getElementById("resultado").innerHTML = `Os número ordenados são ${array}`
+
+        })
+
+        function sortfunction(a, b) {
+            return (a - b)
+        }
+
+
+    </script>
+</body>
+
+</html>

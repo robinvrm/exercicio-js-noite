@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- calculadora IMC com a tela -->
+
+    <input id="peso" type="number" placeholder="Peso">
+    <input id="altura" type="number" placeholder="Altura">
+    <button id="calcular">Calcular IMC </button>
+    <div id="resultado"></div>
+
+
+    <script>
+        document.getElementById("calcular").addEventListener("click", function () {
+            let peso = document.getElementById("peso").value;
+            let altura = document.getElementById("altura").value;
+
+            let calcularIMC = peso / (altura * altura);
+            let IMC = Math.round((calcularIMC + Number.EPSILON) * 100) / 100;
+
+            if (IMC >= 40) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC} Obesidade Classe III`;
+            }
+            else if (IMC >= 35 && IMC < 40) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC}Obesidade Classe II`;
+            }
+            else if (IMC >= 30 && IMC < 35) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC} Obesidade Classe I`;
+            }
+            else if (IMC >= 25 && IMC < 30) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC} Excesso de peso`;
+            }
+            else if (IMC >= 18.5 && IMC < 25) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC} Peso normal`;
+            }
+            else if (IMC < 18.5) {
+                document.getElementById("resultado").innerHTML = `IMC = ${IMC} Abaixo do normal`;
+            }
+        })
+    </script>
+</body>
+
+</html>
